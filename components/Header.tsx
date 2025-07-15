@@ -57,8 +57,8 @@ const HeaderPage = () => {
         >
           <h1
             className={cn(
-              "text-[50px] px-2 leading-12 bigTitle",
-              "md:text-8xl md:px-0 md:leading-20",
+              "text-[50px] leading-12 bigTitle",
+              "md:text-8xl md:leading-20",
               "lg:text-[100px]",
               "xl:text-[100px] xl:leading-[105px]",
               "whitespace-pre-wrap",
