@@ -7,7 +7,7 @@ import ButtonEmail from '../ButtonEmail';
 
 const NavBarDesktop = () => {
     return (
-        <nav className={cn("hidden", "lg:px-6 lg:flex lg:justify-between lg:gap-4")}>
+        <nav className={cn("hidden", "lg:flex lg:justify-between lg:py-4 lg:gap-4 bg-black z-50" )}>
             <div className="flex items-center gap-3">
               <Image
                 src={Logo.src}
@@ -18,7 +18,9 @@ const NavBarDesktop = () => {
               />
               <p className="font-bold text-2xl">Slmrsv</p>
               <ul className="text-lg font-medium flex ml-9 gap-9 items-center">
-               {/*  <li><Link href="#work" className="text-white/70 font-semibold hover:text-white">Works</Link></li> */}
+                <li>
+                  <Link href="/works" className="text-white/70 font-semibold hover:text-white">Works</Link>
+                </li>
                 <li>
                   <Link 
                     href="https://medium.com/@selimbaouz" 
@@ -39,7 +41,7 @@ const NavBarDesktop = () => {
                 </li>
                   <li>
                   <Link 
-                    href="/privacy-policy" 
+                    href="/legal-notice" 
                     className="text-white/70 font-semibold hover:text-white" 
                     target="_blank"
                     rel="noopener noreferrer">

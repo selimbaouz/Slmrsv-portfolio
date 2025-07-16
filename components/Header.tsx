@@ -58,7 +58,7 @@ const HeaderPage = () => {
             className={cn(
               "text-[50px] leading-12 bigTitle",
               "md:text-6xl md:leading-16",
-              "xl:text-[100px] xl:leading-[105px]",
+              "xl:text-[80px] xl:leading-[95px]",
               "whitespace-pre-wrap",
               "text-foreground text-left"
             )}

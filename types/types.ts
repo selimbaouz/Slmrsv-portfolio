@@ -13,6 +13,8 @@ export type WorksData = {
   date: string;
   slug: string;
   image: StaticImageData;
+  backgroundColor: string;
+  color: string;
 }
 
 export type Case = {

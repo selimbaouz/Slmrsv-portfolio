@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 /* import { worksData } from "@/data/work";
 import { articlesData } from "@/data/articles";
 import Works from "@/components/Works";
-import Footer from "@/components/Footer";
 import News from "@/components/News";
 import About from "@/components/About"; */
 
@@ -39,10 +38,6 @@ export default function Home() {
           </div>
         <div className="bg-black flex flex-col">
           <Header />
-        {/*   <About />
-          <Works works={worksData} />
-          <News articles={articlesData} />
-          <Footer /> */}
         </div>
     </Suspense>
   );

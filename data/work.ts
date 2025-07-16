@@ -1,171 +1,128 @@
-import ImmoTouch from "../public/images/immotouch.png";
-import ImmoTouch1 from "../public/images/immoTouch1.png";
-import ImmoTouch2 from "../public/images/immoTouch2.png";
-import ImmoTouch3 from "../public/images/immoTouch3.png";
-import ImmoTouch4 from "../public/images/immoTouch4.png";
-import Kabriol from "../public/images/kabriol.png";
-import Kabriol1 from "../public/images/kabriol1.png";
-import Kabriol2 from "../public/images/kabriol2.png";
-import Kabriol3 from "../public/images/kabriol3.png";
-import Kabriol4 from "../public/images/kabriol4.png";
 import Themify1 from "../public/images/themify1.webp";
 import Themify2 from "../public/images/themify2.webp";
-import SocietechCover from "../public/images/societech.png";
-import Societech from "../public/images/societech1.webp";
-import Societech2 from "../public/images/societech2.webp";
-import Metawaste from "../public/images/metawaste.png";
-import Metawaste1 from "../public/images/metawaste1.png";
-import Metawaste2 from "../public/images/metawaste2.png";
 import Bright from "../public/images/bright.png";
 import Beautycare from "../public/images/beautycare.png";
 import Maely from "../public/images/maely.png";
 import Luxurm from "../public/images/luxurm.png";
 import Bagisty from "../public/images/bagisty.png";
 import Wemom from "../public/images/wemom.png";
-import Sejiux from "../public/images/sejiux.png";
 import HelloPurly from "../public/images/hellopurly.png";
 import HelloPurlyMobile from "../public/images/hellopurly-mobile.png";
 import HelloPurlyMockup from "../public/images/hellopurly-cover.png";
 import Notisucess from "../public/images/notisuccess.png";
 import TailwindLiquid from "../public/images/tailwindliquid.png";
-import PT1 from "../public/images/PT1.png";
-import PT2 from "../public/images/PT2.png";
-import ColorDuo from "../public/images/colorduo.png"
+import MosqiBlock from "../public/images/MosqiBlock.png"
 import { Case } from "@/types/types";
 
 export const worksData = [
-   {
-    title: "Palette & Tints", 
-    category: "Canva", 
-    date: "2025", 
-    image: PT1, 
-    slug: "palette-and-tints",
+  {
+    title: "Mosqi\nBlock",
+    category: "Shopify Headless",
+    date: "2025",
+    image: MosqiBlock,
+    backgroundColor: "#F3F1FE",   // Jaune pâle doux
+    color: "#222140",             // Bleu nuit saturé
+    slug: "mosqiblock",
   },
-   {
-    title: "ColorDuo", 
-    category: "Canva", 
-    date: "2025", 
-    image: ColorDuo, 
-    slug: "colorduo",
-  },
-   {
-    title: "TailwindLiquid", 
-    category: "Saas", 
-    date: "2025", 
-    image: TailwindLiquid, 
+  {
+    title: "Tailwind\nLiquid",
+    category: "Saas",
+    date: "2025",
+    image: TailwindLiquid,
+    backgroundColor: "#B8FFF8",   // Cyan pastel
+    color: "#22223B",             // Bleu marine intense
     slug: "tailwindliquid",
   },
   {
-    title: "Bagisty", 
-    category: "Shopify Headless", 
-    date: "2025", 
-    image: Bagisty, 
+    title: "Bagisty",
+    category: "Shopify Headless",
+    date: "2025",
+    image: Bagisty,
+    backgroundColor: "#FFD6D6",   // Rose très clair
+    color: "#490B3D",             // Prune foncée
     slug: "bagisty",
   },
   {
-    title: "Luxurm", 
-    category: "Shopify Headless", 
-    date: "2025", 
-    image: Luxurm, 
+    title: "Luxurm",
+    category: "Shopify Headless",
+    date: "2025",
+    image: Luxurm,
+    backgroundColor: "#EEF2FB",   // Bleu gris très clair
+    color: "#152D35",             // Bleu sarcelle foncé
     slug: "luxurm",
   },
   {
-    title: "Wewom", 
-    category: "Shopify Headless", 
-    date: "2025", 
-    image: Wemom, 
+    title: "Wewom",
+    category: "Shopify Headless",
+    date: "2025",
+    image: Wemom,
+    backgroundColor: "#FFD6D2",   // Pêche clair
+    color: "#611C35",             // Bordeaux
     slug: "wewom",
   },
   {
-    title: "HelloPurly", 
-    category: "Shopify Headless", 
-    date: "2024", 
-    image: HelloPurlyMobile, 
+    title: "Hello\nPurly",
+    category: "Shopify Headless",
+    date: "2024",
+    image: HelloPurlyMobile,
+    backgroundColor: "#30304A",   // Gris bleu foncé
+    color: "#FFEEA9",             // Jaune albâtre pastel
     slug: "hellopurly",
   },
   {
-    title: "Notisuccess", 
-    category: "Notifications", 
-    date: "2024", 
-    image: Notisucess, 
+    title: "Noti\nSuccess",
+    category: "Notifications",
+    date: "2024",
+    image: Notisucess,
+    backgroundColor: "#24202B",   // Violet gris très sombre
+    color: "#F4B393",             // Abricot doux
     slug: "notisuccess",
   },
   {
-    title: "Themify", 
-    category: "Product", 
-    date: "2023", 
-    image: Themify1, 
+    title: "Themify",
+    category: "Product",
+    date: "2023",
+    image: Themify1,
+    backgroundColor: "#C9D6FF",   // Bleu lavande glacier
+    color: "#403B4A",             // Gris charbon bleu
     slug: "themify",
   },
   {
-    title: "Maely", 
-    category: "Theme Shopify Custom", 
-    date: "2023", 
-    image: Maely, 
+    title: "Maely",
+    category: "Theme Shopify Custom",
+    date: "2023",
+    image: Maely,
+    backgroundColor: "#232526",   // Anthracite/noir chaud
+    color: "#FEC9C9",             // Rose crémeux nude
     slug: "maely",
   },
   {
-    title: "Beautycare", 
-    category: "Theme Shopify Custom", 
-    date: "2023", 
-    image: Beautycare, 
+    title: "Beauty\nCare",
+    category: "Theme Shopify Custom",
+    date: "2023",
+    image: Beautycare,
+    backgroundColor: "#ECF2F9",   // Bleu poudre ultra-pâle
+    color: "#073B4C",             // Bleu pétrole
     slug: "beautycare",
   },
   {
-    title: "Bright", 
-    category: "Theme Shopify Custom", 
-    date: "2023", 
-    image: Bright, 
+    title: "Bright",
+    category: "Theme Shopify Custom",
+    date: "2023",
+    image: Bright,
+    backgroundColor: "#191716",   // Noir subtil
+    color: "#FFE066",             // Jaune pastel solaire
     slug: "bright",
-  },
-  {
-    title: "ImmoTouch", 
-    category: "Web application", 
-    date: "2023", 
-    image: ImmoTouch, 
-    slug: "immotouch",
-  },
-  {
-    title: "Societech", 
-    category: "Landing page", 
-    date: "2022", 
-    image: SocietechCover, 
-    slug: "societech"
-  },
-  {
-    title: "Kabriol", 
-    category: "Web application", 
-    date: "2022", 
-    image: Kabriol, 
-    slug: "kabriol"
-  },
-  {
-    title: "Metawaste", 
-    category: "Back office", 
-    date: "2022", 
-    image: Metawaste, 
-    slug: "metawaste"
   },
 ];
 
+
 export const worksBySlugData: Case[] = [
    {
-    title: "Palette & Tints",
-    category: "Canva",
+    title: "MosqiBlock",
+    category: "Shopify Headless",
     date: "2025",
-    images: [PT1, PT2],
-    slug: "palette-and-tints",
-    company: "Selim Baouz",
-    role: "Application Developer",
-    construction: "ReactJs, Canva Sdk, Typescript",
-    content: "Allows users to generate and apply balanced color palettes and subtle tints to their designs, enhancing visual consistency in one click.",
-    siteUrl: "",
-  },
-   {
-    title: "Color Duo",
-    category: "Canva",
-    date: "2025",
-    images: [ColorDuo],
+    images: [MosqiBlock],
     slug: "colorduo",
     company: "Selim Baouz",
     role: "Application Developer",
@@ -175,7 +132,7 @@ export const worksBySlugData: Case[] = [
   },
    {
     title: "TailwindLiquid",
-    category: "SaaS",
+    category: "Shopify Headless",
     date: "2025",
     images: [TailwindLiquid],
     slug: "tailwindliquid",
@@ -246,18 +203,6 @@ export const worksBySlugData: Case[] = [
     siteUrl: "https://notisuccess.vercel.app/",
   },
   {
-    title: "Sejiux",
-    category: "Studio",
-    date: "2024",
-    images: [Sejiux],
-    slug: "sejiux",
-    company: "Selim Baouz",
-    role: "Founder",
-    construction: "Next.js, React, Shopify Headless",
-    content: "Sejiux is my studio dedicated to creating headless e-commerce stores on Shopify.",
-    siteUrl: "https://sejiux.com/",
-  },
-  {
     title: "Themify",
     category: "Product",
     date: "2023",
@@ -304,63 +249,6 @@ export const worksBySlugData: Case[] = [
     construction: "Liquid, Figma, Shopify",
     content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: sejiux.",
     siteUrl: "https://theme-bright.myshopify.com/",
-  },
-  {
-    title: "ImmoTouch",
-    category: "Web Application",
-    date: "2023",
-    images: [ImmoTouch1, ImmoTouch2, ImmoTouch3, ImmoTouch4],
-    slug: "immotouch",
-    company: "Dev-id",
-    role: "Front-End Developer",
-    construction: "ReactJs, Typescript, MaterialUi, Yup, Git, BitBucket",
-    content: "Creation of the Immo Touch web application from scratch in collaboration with the Dev-id agency for real estate agencies with 3 roles: Admin, Agency with authentication system, and Client (mobile part).",
-    siteUrl: 'https://immotouch.fr/',
-  },
-  {
-    title: "Societech",
-    category: "Landing Page",
-    date: "2022",
-    images: [Societech, Societech2],
-    slug: "societech",
-    company: "Dev-id",
-    role: "Front-End Developer",
-    construction: "AstroJs, Typescript, Tailwindcss, Git, Github",
-    content: "Complete redesign with the Dev-id agency of Societech's presentation site - a media platform for positive innovation and tech-for-good.",
-    siteUrl: 'http://www.societech.fr/',
-  },
-  {
-    title: "Kabriol",
-    category: "Web Application",
-    date: "2022",
-    images: [Kabriol1, Kabriol2, Kabriol3, Kabriol4],
-    slug: "kabriol",
-    company: "Dev-id",
-    role: "Front-End Developer",
-    construction: "ReactJs, Typescript, MaterialUi, Parse Server, Yup, Git, Github, Hostinger, PayPal API, Stripe API",
-    content: "Creation of the Kabriol web application from scratch with the Dev-id agency, featuring a client authentication system, box purchases (1 month, 3 months, 1 year), and adding purchased codes from stores like Fnac for the use of the Kabriol app.",
-    siteUrl: 'https://www.webkabriol.fr/',
-  },
-  {
-    title: "Metawaste",
-    category: "Back Office",
-    date: "2022",
-    images: [Metawaste1, Metawaste2],
-    slug: "metawaste",
-    company: "Dev-id",
-    role: "Front-End Developer",
-    construction: "ReactJs, Typescript, MaterialUi, StyledComponents, Yup, Git, Github",
-    content: "Creation of the Metawaste web application from scratch, reimagining waste management in collaboration with the Dev-id agency.",
-    siteUrl: 'https://metawaste.com/fr/',
-  },
-];
-
-export const legalsLinksData = [
-  {
-    slug: "/support", title: "Support",
-  },
-  {
-    slug: "/legal-notice", title: "Legal Notice",
   },
 ];
 
