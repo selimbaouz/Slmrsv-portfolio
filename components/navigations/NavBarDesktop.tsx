@@ -7,7 +7,7 @@ import ButtonEmail from '../ButtonEmail';
 
 const NavBarDesktop = () => {
     return (
-        <nav className={cn("hidden", "lg:flex lg:justify-between lg:py-4 lg:gap-4 bg-black z-50" )}>
+        <nav className={cn("hidden", "lg:flex lg:justify-between lg:gap-4 z-50" )}>
             <div className="flex items-center gap-3">
               <Image
                 src={Logo.src}
