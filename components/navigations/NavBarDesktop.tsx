@@ -1,11 +1,16 @@
+"use client";
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 import Logo from "@/public/images/Logo.png";
 import Link from 'next/link';
 import ButtonEmail from '../ButtonEmail';
+import { usePathname } from 'next/navigation';
+import { navLinks } from '@/data/work';
 
 const NavBarDesktop = () => {
+  const pathname = usePathname();
+  
     return (
         <nav className={cn("hidden", "lg:flex lg:justify-between lg:gap-4 z-50" )}>
             <div className="flex items-center gap-3">
@@ -18,36 +23,15 @@ const NavBarDesktop = () => {
               />
               <p className="font-bold text-2xl">Slmrsv</p>
               <ul className="text-lg font-medium flex ml-9 gap-9 items-center">
-                <li>
-                  <Link href="/works" className="text-white/70 font-semibold hover:text-white">Works</Link>
-                </li>
-                <li>
-                  <Link 
-                    href="https://medium.com/@selimbaouz" 
-                    className="text-white/70 font-semibold hover:text-white" 
-                    target="_blank"
-                    rel="noopener noreferrer">
-                      Blog
-                  </Link>
-                </li>
-                  <li>
-                  <Link 
-                    href="/support"
-                    className="text-white/70 font-semibold hover:text-white" 
-                    target="_blank"
-                    rel="noopener noreferrer">
-                      Support
-                  </Link>
-                </li>
-                  <li>
-                  <Link 
-                    href="/legal-notice" 
-                    className="text-white/70 font-semibold hover:text-white" 
-                    target="_blank"
-                    rel="noopener noreferrer">
-                      Legal Notice
-                  </Link>
-                </li>
+                {navLinks.map((link, i) => (
+                  <li key={i}>
+                    <Link 
+                      href={link.href}
+                      className={cn("text-white/70 font-semibold hover:text-white", link.href === pathname && "text-white")}>
+                    {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <ButtonEmail />

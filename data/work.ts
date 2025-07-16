@@ -14,6 +14,13 @@ import TailwindLiquid from "../public/images/tailwindliquid.png";
 import MosqiBlock from "../public/images/MosqiBlock.png"
 import { Case } from "@/types/types";
 
+export const navLinks = [
+  { href: "/works", label: "Works" },
+  { href: "https://medium.com/@selimbaouz", label: "Blog" },
+  { href: "/support", label: "Support" },
+  { href: "/legal-notice", label: "Legal Notice" },
+]; 
+
 export const worksData = [
   {
     title: "Mosqi\nBlock",
