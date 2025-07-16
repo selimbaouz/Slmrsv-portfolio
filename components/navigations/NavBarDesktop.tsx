@@ -18,8 +18,7 @@ const NavBarDesktop = () => {
               />
               <p className="font-bold text-2xl">Slmrsv</p>
               <ul className="text-lg font-medium flex ml-9 gap-9 items-center">
-                {/* <li><Link href="#about" className="text-white/70 font-semibold hover:text-white">About</Link></li>
-                <li><Link href="#work" className="text-white/70 font-semibold hover:text-white">Work</Link></li> */}
+               {/*  <li><Link href="#work" className="text-white/70 font-semibold hover:text-white">Works</Link></li> */}
                 <li>
                   <Link 
                     href="https://medium.com/@selimbaouz" 
@@ -27,6 +26,24 @@ const NavBarDesktop = () => {
                     target="_blank"
                     rel="noopener noreferrer">
                       Blog
+                  </Link>
+                </li>
+                  <li>
+                  <Link 
+                    href="/support"
+                    className="text-white/70 font-semibold hover:text-white" 
+                    target="_blank"
+                    rel="noopener noreferrer">
+                      Support
+                  </Link>
+                </li>
+                  <li>
+                  <Link 
+                    href="/privacy-policy" 
+                    className="text-white/70 font-semibold hover:text-white" 
+                    target="_blank"
+                    rel="noopener noreferrer">
+                      Legal Notice
                   </Link>
                 </li>
               </ul>
