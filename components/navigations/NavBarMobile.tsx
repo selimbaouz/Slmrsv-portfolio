@@ -2,8 +2,7 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 import Logo from "@/public/images/Logo.png";
-import { Button } from '../ui/button';
-import Link from 'next/link';
+import ButtonEmail from '../ButtonEmail';
 /* import { HiMenuAlt4 } from 'react-icons/hi'; */
 
 const NavBarMobile = () => {
@@ -16,9 +15,7 @@ const NavBarMobile = () => {
                 <Image src={Logo.src} alt="Logo" width={Logo.width} height={Logo.height} className={cn("w-auto h-6")} />
                 <p className={cn("text-white font-bold text-xl")}>Slmrsv</p>
             </div>
-            <Link href="mailto:slmrsv.bz@gmail.com">
-                <Button className={cn("font-bold rounded-full bg-[#6D29F1] text-white")}>Get in touch</Button>
-            </Link>
+            <ButtonEmail isMobile />
         </nav>
     );
 };

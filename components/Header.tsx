@@ -27,7 +27,7 @@ const HeaderPage = () => {
 
     timeoutRef.current = setTimeout(() => {
       setIndex((prev) => (prev + 1) % words.length);
-    }, 3000);
+    }, 1000);
 
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -42,9 +42,8 @@ const HeaderPage = () => {
     <header
       id="home"
       className={cn(
-        "overflow-hidden relative size-full lg:h-[100dvh] grid grid-rows-2 justify-start lg:px-20 lg:py-14 items-end",
-        "md:gap-10",
-        "lg:grid-cols-2 lg:items-end lg:grid-rows-1"
+        "overflow-hidden relative size-full grid grid-rows-2 justify-start items-end",
+        "xl:grid-cols-2 xl:items-end xl:grid-rows-1 xl:h-[100dvh] xl:px-20 xl:py-14"
       )}
     >
       <div className="lg:flex lg:flex-col lg:justify-between lg:h-full">
@@ -58,8 +57,7 @@ const HeaderPage = () => {
           <h1
             className={cn(
               "text-[50px] leading-12 bigTitle",
-              "md:text-8xl md:leading-20",
-              "lg:text-[100px]",
+              "md:text-6xl md:leading-16",
               "xl:text-[100px] xl:leading-[105px]",
               "whitespace-pre-wrap",
               "text-foreground text-left"
@@ -68,23 +66,23 @@ const HeaderPage = () => {
             I create
             <br />
             <div className="pt-1 lg:pt-2">
-              <span className="font-bold uppercase xl:text-[120px] xl:leading-[80px]">
+              <span className="font-bold uppercase md:text-8xl md:leading-20 lg:text-[110px] lg:leading-24 xl:text-[120px] xl:leading-[80px]">
                 Immersive <br />{words[index]}
               </span>
             </div>
           </h1>
           <div className="border w-full border-white" />
-            <div className="pb-2 lg:pb-0 flex items-center gap-2 lg:gap-4">
-                <Image src={Canva.src} alt="Canva Partner" className="w-auto h-9 lg:h-14 rounded-full" width={Canva.width} height={Canva.height} />
-                <Image src={Shopify.src} alt="Shopify Partner" className="w-auto h-9 lg:h-14" width={Shopify.width} height={Shopify.height} />
+            <div className="pb-2  md:pb-6 lg:pb-10 xl:pb-0 flex items-center gap-2 lg:gap-4">
+                <Image src={Canva.src} alt="Canva Partner" className="w-auto h-9 lg:h-12 xl:h-14 rounded-full" width={Canva.width} height={Canva.height} />
+                <Image src={Shopify.src} alt="Shopify Partner" className="w-auto h-9 lg:h-12 xl:h-14" width={Shopify.width} height={Shopify.height} />
             </div>
         </div>
       </div>
-      <div className="flex flex-col justify-end h-full">
+      <div className="flex flex-col justify-end size-full">
         <Image 
           src={Portfolio.src} 
           alt="Portfolio Partner" 
-          className="w-full h-[430px] object-cover xl:h-[97%] xl:w-[47%] bg-gray-200/30 lg:rounded-3xl lg:absolute lg:top-4 lg:right-4" 
+          className="w-full h-[430px] object-cover md:w-screen md:h-full xl:h-[97%] xl:w-[47%] bg-gray-200/30 xl:rounded-3xl xl:absolute xl:top-4 xl:right-4" 
           width={Portfolio.width} 
           height={Portfolio.height} 
         />

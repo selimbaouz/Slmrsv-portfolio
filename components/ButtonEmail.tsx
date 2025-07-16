@@ -1,0 +1,19 @@
+import Link from 'next/link';
+import React, { FC } from 'react';
+import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
+
+interface ButtonEmailProps {
+    isMobile?: boolean;
+}
+const ButtonEmail: FC<ButtonEmailProps> = ({
+    isMobile
+}) => {
+    return (
+       <Link href="mailto:slmrsv.bz@gmail.com z-50 absolute top-5 right-5">
+            <Button className={cn("font-bold rounded-full bg-gradient-to-r from-[#5738F4] to-[#7D2AE8] text-white flex justify-center items-center lg:text-base lg:p-6 cursor-pointer")} size={isMobile ? "default" : "lg"}>Get in touch</Button>
+        </Link>
+    );
+};
+
+export default ButtonEmail;
