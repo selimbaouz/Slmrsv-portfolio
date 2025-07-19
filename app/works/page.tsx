@@ -12,11 +12,11 @@ export default async function WorksPage() {
          <Link
           href=".."
           className={cn(
-            "rounded-full w-max bg-black shadow-md p-2 flex items-center justify-center cursor-pointer",
-            "hover:bg-white group group-hover:text-black hover:gap-4"
+            "rounded-full w-max bg-black bg-blend-exclusion shadow-md p-2 flex items-center justify-center cursor-pointer",
+            "hover:bg-white hover:border hover:border-black group hover:gap-4"
           )}
         >
-          <IoArrowBackSharp className={cn("text-white hover:text-black", "lg:text-xl")} />
+          <IoArrowBackSharp className={cn("text-white group-hover:text-black", "lg:text-xl")} />
         </Link>
       </div>
       <div className="space-y-24 py-24 lg:py-32 lg:space-y-44 whitespace-pre-line">

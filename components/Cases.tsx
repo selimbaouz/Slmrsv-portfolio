@@ -1,203 +1,364 @@
 "use client";
+
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { Case, WorksData } from "@/types/types";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import Container from "./Container";
+import ImageLoader from "./ImageLoader";
+import { useEffect, useState, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+
+// Animation lettre à lettre spéciale pour le HERO/TITRE
+function AnimatedLetters({ text = "", color = "#111", fontWeight = 800, fontSize = "clamp(2.2rem, 15vw, 13rem)", className = "", style = {} }) {
+  if (!text) return null;
+  const lines = text.split("\n");
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={text}
+        className={cn("flex flex-col items-center justify-center w-full leading-[1] pointer-events-none select-none", className)}
+        style={style}
+      >
+        {lines.map((line, lidx) => (
+          <div
+            key={lidx}
+            className="flex flex-row flex-wrap justify-center w-full overflow-hidden"
+            style={{
+              gap: lines.length === 1 ? "clamp(0.7rem, 7vw, 5rem)" : "clamp(0.12em, 2vw, 1.3em)",
+              marginBottom: (lidx < lines.length - 1 ? "clamp(1rem, 5vw, 3.5rem)" : undefined),
+            }}
+          >
+            {[...line].map((letter, i) => (
+              <motion.span
+                key={i}
+                initial={{ y: "100%", opacity: 0, scale: 0.96 }}
+                animate={{ y: "0%", opacity: 1, scale: 1 }}
+                exit={{ y: "-100%", opacity: 0, scale: 1.08 }}
+                transition={{ delay: i * 0.04 + lidx * 0.20, duration: 0.4 }}
+                className="uppercase"
+                style={{
+                  display: "inline-block",
+                  fontSize,
+                  color,
+                  fontWeight,
+                  lineHeight: "0.8",
+                  userSelect: "text",
+                }}
+              >
+                {letter === " " ? "\u00A0" : letter}
+              </motion.span>
+            ))}
+          </div>
+        ))}
+      </motion.div>
+    </AnimatePresence>
+  );
+}
 
 interface CasesProps {
   cases: Case;
   previousProjectSlug?: WorksData;
   nextProjectSlug?: WorksData;
 }
+
 const Cases = ({
   cases,
   previousProjectSlug,
   nextProjectSlug,
 }: CasesProps) => {
-  
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  // Embla vertical for desktop
+  const [emblaRefDesktop, emblaApiDesktop] = useEmblaCarousel({
+    axis: "y",
+    direction: "ltr",
+    dragFree: false,
+    loop: false,
+  });
+
+  // Embla horizontal for mobile
+  const [emblaRefMobile] = useEmblaCarousel({
+    axis: "x",
+    direction: "ltr",
+    dragFree: false,
+    loop: false,
+  });
+
+  const onSelect = useCallback(() => {
+    if (!emblaApiDesktop) return;
+    setSelectedIndex(emblaApiDesktop.selectedScrollSnap());
+  }, [emblaApiDesktop]);
+
+  useEffect(() => {
+    if (!emblaApiDesktop) return;
+    emblaApiDesktop.on("select", onSelect);
+    onSelect();
+    return () => {
+      emblaApiDesktop.off("select", onSelect);
+    };
+  }, [emblaApiDesktop, onSelect]);
+
+  const handleThumbnailClick = (index: number) => {
+    if (!emblaApiDesktop) return;
+    emblaApiDesktop.scrollTo(index);
+  };
+
   return (
     <Container>
-      <div
-        className={cn(
-          "font-montserrat text-xl w-full text-center h-full",
-          "md:text-left md:text-2xl",
-          "xl:text-4xl",
-        )}
-      >
-        <Link
-          href="/"
-          className={cn(
-            "text-xs uppercase font-medium gap-2 flex items-center hover:gap-4 cursor-pointer",
-            "xl:text-lg",
-          )}
-        >
-          <GoArrowLeft
-            className={cn("text-xs", "lg:text-lg")}
+      <div className="lg:overflow-hidden relative w-full h-[90vh] flex flex-col justify-center lg:justify-center items-center">
+        <motion.div
+          className="fixed inset-0 z-0 transition-colors duration-500"
+          style={{
+            backgroundColor: cases?.backgroundColor || "#000",
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7 }}
+        />
+
+        {/* HERO Titre animé lettre à lettre */}
+        <div className="fixed top-0 left-0 right-0 pointer-events-none flex justify-center items-start flex-wrap z-30">
+          <AnimatedLetters
+            text={cases?.title ?? ""}
+            color={cases?.color ?? "#222"}
+            fontWeight={800}
+            fontSize="clamp(2.2rem, 15vw, 13rem)"
+            className="font-bold text-center pt-4 px-1"
           />
-          Back
-        </Link>
+        </div>
+
+        {/* Thumbnails à gauche */}
         <div
           className={cn(
-            "space-y-10",
-            "xl:pb-28 xl:space-y-20",
+            "hidden lg:flex flex-col justify-center items-center gap-4",
+            "absolute left-0 top-0 bottom-0 h-full px-4 z-20"
           )}
+          style={{ minWidth: "60px" }}
         >
+          {cases?.images?.map((image, index) => (
+            <div key={index} className="rounded-lg cursor-pointer" onClick={() => handleThumbnailClick(index)}>
+              <ImageLoader
+                src={image.src ?? ""}
+                alt="Thumbnail"
+                className={cn(
+                  "lg:w-auto w-full h-[44px] lg:size-14 object-cover",
+                  "xl:w-full"
+                )}
+                width={image.width}
+                height={image.height}
+                style={{
+                  border: selectedIndex === index ? `2px solid ${cases?.color}` : "none",
+                  padding: "3px",
+                }}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-col justify-center gap-4 items-center z-50">
+
+          {/* Desktop carousel */}
           <div
-            className={cn(
-              "xl:flex xl:flex-col xl:h-[60vh] xl:justify-end",
-            )}
+            ref={emblaRefDesktop}
+            className="w-full mx-auto hidden lg:block"
+            style={{
+              maxHeight: "70vh",
+              position: "relative",
+              zIndex: 10,
+              overflow: "hidden",
+            }}
           >
             <div
-              className={cn(
-                "pt-[400px] text-left flex flex-col",
-                "xs:pt-[350px]",
-                "sm:pt-[300px]",
-                "xl:flex-row xl:justify-between xl:items-end",
-              )}
+              className="embla__container gap-4"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                height: "100%",
+              }}
             >
-              <p
-                className={cn(
-                  "text-5xl pt-10",
-                  "sm:text-6xl",
-                  "xl:pt-0 xl:text-[150px]",
-                )}
-              >
-                {cases?.title}
-              </p>
-              <div
-                className={cn(
-                  "text-sm text-right pt-14",
-                  "xl:text-base xl:pt-0 font-[Montserrat]",
-                )}
-              >
-                <p>{cases?.date}</p>
-                <p>{cases?.company}</p>
-                <p>{cases?.construction}</p>
-                <p>{cases?.role}</p>
-                {cases?.siteUrl && (
-                  <div
+              {cases?.images.map((img, index) => (
+                <div
+                  className="embla__slide flex-shrink-0 flex-grow-0"
+                  key={index}
+                  style={{ minHeight: "70vh", height: "70vh" }}
+                >
+                  <Image
+                    src={img.src}
+                    alt={`image of ${cases.title} project`}
+                    width={1200}
+                    height={750}
+                    draggable={false}
+                    priority={index === 0}
                     className={cn(
-                      "text-xs gap-2 mt-5 flex justify-end items-center hover:gap-4 cursor-pointer",
-                      "xl:text-lg",
+                      "object-cover mx-auto max-h-[70vh] w-auto rounded-xl"
                     )}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile carousel */}
+          <div
+            ref={emblaRefMobile}
+            className="w-full mx-auto lg:hidden"
+            style={{
+              position: "relative",
+              zIndex: 10,
+              overflow: "hidden",
+            }}
+          >
+            <div
+              className="embla__container gap-4"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              {cases?.images.map((img, index) => (
+                <div
+                  className="embla__slide flex-shrink-0 flex-grow-0"
+                  key={index}
+                  style={{ width: "100%", minWidth: "100%" }}
+                >
+                  <Image
+                    src={img.src}
+                    alt={`image of ${cases.title} project`}
+                    width={1200}
+                    height={1200}
+                    draggable={false}
+                    priority={index === 0}
+                    className="object-cover mx-auto rounded-xl"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Thumbnails mobile */}
+          <div
+            className={cn(
+              "flex justify-center items-center gap-2",
+              "lg:hidden"
+            )}
+            style={{ minWidth: "60px" }}
+          >
+            {cases?.images?.map((image, index) => (
+              <div key={index} className="rounded-lg cursor-pointer" onClick={() => handleThumbnailClick(index)}>
+                <ImageLoader
+                  src={image.src ?? ""}
+                  alt="Thumbnail"
+                  className={cn(
+                    "w-full h-[35px] object-cover",
+                  )}
+                  width={image.width}
+                  height={image.height}
+                  style={{
+                    border: selectedIndex === index ? `2px solid ${cases?.color}` : "none",
+                    padding: "3px",
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Pagination + liens et content animé (fade simple, garde la liste ordinale) */}
+          <div className="absolute bottom-0 w-full">
+            <div
+              style={{ color: cases?.color }}
+              className="w-full grid grid-cols-3 items-center relative"
+            >
+              <div
+                className={cn("flex items-center justify-start gap-2", {
+                  invisible: !previousProjectSlug?.slug,
+                })}
+              >
+                {previousProjectSlug?.slug && (
+                  <Link
+                    href={`/works/${previousProjectSlug.slug}`}
+                    className="font-medium text-xs xl:text-sm"
                   >
-                    <Link
-                      href={cases?.siteUrl}
-                      className={cn(
-                        "font-medium uppercase",
-                        "duration-500 delay-75",
-                      )}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Launch
-                    </Link>
-                    <GoArrowRight
-                      className={cn("text-xs", "lg:text-lg")}
-                    />
-                  </div>
+                    <GoArrowLeft className="text-base lg:text-xl" />
+                  </Link>
+                )}
+              </div>
+              <div className="flex justify-center">
+                <motion.p
+                  className={cn("hidden lg:block max-w-xl text-sm font-medium leading-5 text-center py-4")}
+                  style={{ color: cases?.color }}
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.15 }}
+                >
+                  {cases?.content}
+                </motion.p>
+              </div>
+              <div
+                className={cn("flex items-center justify-end gap-2", {
+                  invisible: !nextProjectSlug?.slug,
+                })}
+              >
+                {nextProjectSlug?.slug && (
+                  <Link
+                    href={`/works/${nextProjectSlug.slug}`}
+                    className="font-medium text-xs xl:text-sm"
+                  >
+                    <GoArrowRight className="text-base lg:text-xl" />
+                  </Link>
                 )}
               </div>
             </div>
           </div>
-          <div
-            className={cn(
-              "space-y-4",
-              "xl:space-y-0",
-              cases?.images && cases.images.length === 1 ? "xl:flex xl:justify-center xl:items-center xl:w-max xl:mx-auto" : "xl:grid xl:grid-cols-2 xl:items-center xl:gap-6"
-            )}
+
+          {/* Texte mobile content animé fade */}
+          <motion.p
+            className={cn("lg:hidden absolute bottom-0 text-xs font-medium leading-5 text-center py-4")}
+            style={{ color: cases?.color }}
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.9, delay: 0.13 }}
           >
-            {cases?.images?.map((image, index) => (
-              <Image
-                key={index}
-                src={image}
-                alt="Pictures of projects"
-                width={1200}
-                height={750}
-                className={cn(
-                  "w-full bg-gray-300 rounded-3xl object-cover",
-                )}
-              />
-            ))}
-          </div>
-          <div
-            className={cn("flex items-center", {
-              "justify-start":
-                previousProjectSlug && !nextProjectSlug,
-              "justify-between":
-                previousProjectSlug && nextProjectSlug,
-              "justify-end":
-                !previousProjectSlug && nextProjectSlug,
-            })}
-          >
-            <div
-              className={cn(
-                "gap-2 flex items-center hover:gap-4 cursor-pointer",
-                {
-                  hidden: !previousProjectSlug?.slug,
-                },
-              )}
-            >
-              <GoArrowLeft
-                className={cn("text-xs", "lg:text-lg")}
-              />
-              <Link
-                href={`/cases/${previousProjectSlug?.slug}`}
-                className={cn(
-                  "font-medium uppercase text-xs",
-                  "xl:text-lg",
-                )}
-              >
-                Previous projet
-              </Link>
-            </div>
-            <div
-              className={cn(
-                "gap-2 flex items-center hover:gap-4 cursor-pointer",
-                {
-                  hidden: !nextProjectSlug?.slug,
-                },
-              )}
-            >
-              <Link
-                href={`/cases/${nextProjectSlug?.slug}`}
-                className={cn(
-                  "font-medium uppercase text-xs",
-                  "xl:text-lg",
-                )}
-              >
-                Next project
-              </Link>
-              <GoArrowRight
-                className={cn("text-xs", "lg:text-lg")}
-              />
-            </div>
-          </div>
-          <div
-            className={cn(
-              "w-full pt-14 text-center flex justify-center font-[Montserrat]",
-            )}
-          >
-            <p
-              className={cn(
-                "text-sm font-light",
-                "xl:w-[900px] xl:text-lg",
-              )}
-            >
-              {cases?.content}
-            </p>
-          </div>
+            {cases?.content}
+          </motion.p>
         </div>
-        <p
+
+        {/* Infos à droite animées fade */}
+        <div
           className={cn(
-            "font-[Montserrat] pt-14 w-full text-center font-ms font-normal text-xs",
-            "md:text-sm",
+            "hidden lg:flex flex-col justify-center items-center gap-4",
+            "absolute right-0 top-0 bottom-0 h-full px-4 z-20 max-w-sm"
           )}
+          style={{ minWidth: "60px" }}
         >
-          ©2023 - Selim Baouz. All Rights Reserved.
-        </p>
+          <ul
+            className="text-sm text-right"
+            style={{ color: cases?.color }}
+          >
+            <motion.li initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.18, duration: 0.60 }}>{cases?.category}</motion.li>
+            <motion.li initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.22, duration: 0.60 }}>{cases?.date}</motion.li>
+            <motion.li initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.26, duration: 0.60 }}>{cases?.construction}</motion.li>
+            <motion.li initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.30, duration: 0.60 }}>{cases?.role}</motion.li>
+            <motion.li initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.34, duration: 0.60 }}>
+              {cases?.siteUrl && (
+                <div className={cn("text-xs gap-2 mt-5 flex justify-end items-center hover:gap-4 cursor-pointer", "xl:text-lg")}>
+                  <Link
+                    href={cases?.siteUrl}
+                    className={cn("font-medium text-sm", "duration-500 delay-75")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: cases?.color }}
+                  >
+                    Launch
+                  </Link>
+                  <GoArrowRight className={cn("text-xs", "lg:text-lg")} />
+                </div>
+              )}
+            </motion.li>
+          </ul>
+        </div>
       </div>
     </Container>
   );

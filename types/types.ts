@@ -28,5 +28,7 @@ export type Case = {
   slug: string;
   siteUrl: string | null;
   images: StaticImageData[];
+  backgroundColor: string;
+  color: string;
 } | null;
 

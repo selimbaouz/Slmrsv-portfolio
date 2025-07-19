@@ -21,7 +21,7 @@ const NavBarDesktop = () => {
                 height={Logo.height}
                 className="w-auto h-8"
               />
-              <p className="font-bold text-2xl">Slmrsv</p>
+              <p className="font-bold text-2xl uppercase font-montserrat">Slmrsv</p>
               <ul className="text-lg font-medium flex ml-9 gap-9 items-center">
                 {navLinks.map((link, i) => (
                   <li key={i}>

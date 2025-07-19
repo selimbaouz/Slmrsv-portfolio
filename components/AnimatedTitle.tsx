@@ -17,7 +17,7 @@ export const AnimatedTitleResponsive = ({
           key={title}
           className="flex flex-col items-center justify-center w-full px-2 py-2"
           style={{
-            lineHeight: 1,
+            lineHeight: 1, 
             textAlign: "center",
             userSelect: "none",
             pointerEvents: "none",
@@ -29,7 +29,10 @@ export const AnimatedTitleResponsive = ({
               className="flex flex-row flex-wrap justify-center w-full overflow-hidden"
               style={{
                 gap: lines.length === 1 ? "clamp(0.7rem, 7vw, 5rem)" : "clamp(0.12em, 2vw, 1.3em)",
-                marginBottom: lidx < lines.length - 1 ? "clamp(1rem, 5vw, 3.5rem)" : undefined,
+                marginBottom: (lidx < lines.length - 1 
+                      ? "clamp(1rem, 5vw, 3.5rem)" 
+                      : undefined
+                  ),
               }}
             >
               {[...line].map((letter, i) => (
@@ -42,10 +45,10 @@ export const AnimatedTitleResponsive = ({
                   className="uppercase"
                   style={{
                     display: "inline-block",
-                    fontSize: "clamp(2.2rem, 15vw, 12rem)",
+                    fontSize: "clamp(2.2rem, 15vw, 13rem)",
                     color,
                     fontWeight: 800,
-                    lineHeight: "0.8",
+                    lineHeight: "0.8",  
                   }}
                 >
                   {letter}

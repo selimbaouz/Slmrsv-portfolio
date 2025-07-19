@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { WorksData } from "@/types/types";
 import { forwardRef, useRef, useImperativeHandle } from "react";
+import Link from "next/link";
 
 interface ProjectItemProps {
   work: WorksData;
@@ -34,16 +35,18 @@ export const ProjectItem = forwardRef<HTMLDivElement, ProjectItemProps>(
     return (
       <motion.div
         ref={innerRef}
-        className="flex flex-col items-center transition-all duration-700"
+        className="flex flex-col cursor-pointer items-center transition-all duration-700"
         style={{ y, scale, opacity: 1 }}
       >
-        <Image
-          src={work.image}
-          alt={work.title}
-          width={1000}
-          height={600}
-          className="rounded-xl shadow-2xl"
-        />
+        <Link href={`/works/${work.slug}`}>
+          <Image
+            src={work.image}
+            alt={work.title}
+            width={1000}
+            height={600}
+            className="rounded-xl shadow-2xl"
+          />
+      </Link>
       </motion.div>
     );
   }

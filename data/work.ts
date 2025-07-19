@@ -27,8 +27,8 @@ export const worksData = [
     category: "Shopify Headless",
     date: "2025",
     image: MosqiBlock,
-    backgroundColor: "#F3F1FE",   // Jaune pâle doux
-    color: "#222140",             // Bleu nuit saturé
+    backgroundColor: "#222140",   
+    color: "#DFCFFF",             
     slug: "mosqiblock",
   },
   {
@@ -36,8 +36,8 @@ export const worksData = [
     category: "Saas",
     date: "2025",
     image: TailwindLiquid,
-    backgroundColor: "#B8FFF8",   // Cyan pastel
-    color: "#22223B",             // Bleu marine intense
+    backgroundColor: "#F3F1FE",   
+    color: "#22223B",             
     slug: "tailwindliquid",
   },
   {
@@ -45,8 +45,8 @@ export const worksData = [
     category: "Shopify Headless",
     date: "2025",
     image: Bagisty,
-    backgroundColor: "#FFD6D6",   // Rose très clair
-    color: "#490B3D",             // Prune foncée
+    backgroundColor: "#FFE9CF",   
+    color: "#D76A01",
     slug: "bagisty",
   },
   {
@@ -54,8 +54,8 @@ export const worksData = [
     category: "Shopify Headless",
     date: "2025",
     image: Luxurm,
-    backgroundColor: "#EEF2FB",   // Bleu gris très clair
-    color: "#152D35",             // Bleu sarcelle foncé
+    backgroundColor: "#18263A",  
+    color: "#B4D5FF",             
     slug: "luxurm",
   },
   {
@@ -63,8 +63,8 @@ export const worksData = [
     category: "Shopify Headless",
     date: "2025",
     image: Wemom,
-    backgroundColor: "#FFD6D2",   // Pêche clair
-    color: "#611C35",             // Bordeaux
+    backgroundColor: "#FFD6D2",
+    color: "#611C35",
     slug: "wewom",
   },
   {
@@ -72,8 +72,8 @@ export const worksData = [
     category: "Shopify Headless",
     date: "2024",
     image: HelloPurlyMobile,
-    backgroundColor: "#30304A",   // Gris bleu foncé
-    color: "#FFEEA9",             // Jaune albâtre pastel
+    backgroundColor: "#30304A",
+    color: "#FFEEA9",
     slug: "hellopurly",
   },
   {
@@ -81,8 +81,8 @@ export const worksData = [
     category: "Notifications",
     date: "2024",
     image: Notisucess,
-    backgroundColor: "#24202B",   // Violet gris très sombre
-    color: "#F4B393",             // Abricot doux
+    backgroundColor: "#24202B",
+    color: "#F4B393",
     slug: "notisuccess",
   },
   {
@@ -90,8 +90,8 @@ export const worksData = [
     category: "Product",
     date: "2023",
     image: Themify1,
-    backgroundColor: "#C9D6FF",   // Bleu lavande glacier
-    color: "#403B4A",             // Gris charbon bleu
+    backgroundColor: "#C9D6FF",
+    color: "#403B4A",
     slug: "themify",
   },
   {
@@ -99,8 +99,8 @@ export const worksData = [
     category: "Theme Shopify Custom",
     date: "2023",
     image: Maely,
-    backgroundColor: "#232526",   // Anthracite/noir chaud
-    color: "#FEC9C9",             // Rose crémeux nude
+    backgroundColor: "#232526",
+    color: "#FEC9C9",
     slug: "maely",
   },
   {
@@ -108,8 +108,8 @@ export const worksData = [
     category: "Theme Shopify Custom",
     date: "2023",
     image: Beautycare,
-    backgroundColor: "#ECF2F9",   // Bleu poudre ultra-pâle
-    color: "#073B4C",             // Bleu pétrole
+    backgroundColor: "#ECF2F9",
+    color: "#073B4C",
     slug: "beautycare",
   },
   {
@@ -117,8 +117,8 @@ export const worksData = [
     category: "Theme Shopify Custom",
     date: "2023",
     image: Bright,
-    backgroundColor: "#191716",   // Noir subtil
-    color: "#FFE066",             // Jaune pastel solaire
+    backgroundColor: "#191716",
+    color: "#FFE066",
     slug: "bright",
   },
 ];
@@ -126,25 +126,29 @@ export const worksData = [
 
 export const worksBySlugData: Case[] = [
    {
-    title: "MosqiBlock",
-    category: "Shopify Headless",
+    title: "Mosqi\nBlock",
+    category: "Ecommerce",
     date: "2025",
     images: [MosqiBlock],
-    slug: "colorduo",
+    backgroundColor: "#222140",   
+    color: "#DFCFFF",  
+    slug: "mosqiblock",
     company: "Selim Baouz",
-    role: "Application Developer",
-    construction: "ReactJs, Canva Sdk, Typescript",
-    content: "Helps designers choose complementary color pairs tailored to their project, promoting aesthetic harmony and brand coherence within Canva.",
-    siteUrl: "",
+    role: "Design/Development",
+    construction: "Shopify, NextJs, Tailwindcss",
+    content: "MosqiBlock is an online store dedicated to fighting mosquitoes, offering an innovative and effective solution to protect individuals from bites.",
+    siteUrl: "https://mosqiblock.com",
   },
    {
-    title: "TailwindLiquid",
-    category: "Shopify Headless",
+    title: "Tailwind\nLiquid",
+    category: "Ecommerce",
     date: "2025",
     images: [TailwindLiquid],
+    backgroundColor: "#F3F1FE",   
+    color: "#22223B", 
     slug: "tailwindliquid",
     company: "Selim Baouz",
-    role: "Founder",
+    role: "Design/Development",
     construction: "Shopify, NextJs, Tailwindcss, Prisma",
     content: "An accessible alternative to premium themes and paid apps on Shopify, enabling merchants to easily professionalize their stores with a simple copy-paste.",
     siteUrl: "https://tailwindliquid.com/",
@@ -154,9 +158,11 @@ export const worksBySlugData: Case[] = [
     category: "Shopify Headless",
     date: "2025",
     images: [Bagisty],
+    backgroundColor: "#FFE9CF",   
+    color: "#D76A01",
     slug: "bagisty",
     company: "Selim Baouz",
-    role: "UX/UI Designer",
+    role: "Design only",
     construction: "Figma",
     content: "Bagisty is an e-commerce store specializing in leather goods with a minimalist aesthetic and optimized user experience.",
     siteUrl: "",
@@ -166,9 +172,11 @@ export const worksBySlugData: Case[] = [
     category: "Shopify Headless",
     date: "2025",
     images: [Luxurm],
+    backgroundColor: "#18263A",  
+    color: "#B4D5FF",   
     slug: "luxurm",
     company: "Selim Baouz",
-    role: "UX/UI Designer",
+    role: "Design only",
     construction: "Figma",
     content: "Luxurm is an online store dedicated to high-end perfumes, showcasing the essence of olfactory luxury through an immersive experience.",
     siteUrl: "",
@@ -178,33 +186,39 @@ export const worksBySlugData: Case[] = [
     category: "Shopify Headless",
     date: "2025",
     images: [Wemom],
+    backgroundColor: "#FFD6D2",
+    color: "#611C35",
     slug: "wewom",
     company: "Selim Baouz",
-    role: "UX/UI Designer",
+    role: "Design only",
     construction: "Figma",
     content: "Wewom is a store dedicated to the safety of expectant mothers, featuring an essential product: a belt that effectively protects both mother and baby.",
-    siteUrl: "https://headless-template-nextjs.vercel.app/",
+    siteUrl: "",
   },
   {
-    title: "HelloPurly",
+    title: "Hello\nPurly",
     category: "Shopify Headless",
     date: "2024",
     images: [HelloPurlyMockup, HelloPurly],
+    backgroundColor: "#30304A",
+    color: "#FFEEA9",
     slug: "hellopurly",
     company: "Selim Baouz",
-    role: "UX/UI Design and Development",
+    role: "Design/Development",
     construction: "Figma, Shopify Headless, Next.js, React, Tailwindcss",
     content: "HelloPurly is a headless Shopify store dedicated to modern bidets, designed to transform daily hygiene while minimizing ecological impact. Fully developed, from design to integration, it combines innovation and sustainability.",
-    siteUrl: "https://hellopurly.fr/",
+    siteUrl: "",
   },
   {
-    title: "Notisuccess",
+    title: "Noti\nSuccess",
     category: "Notifications",
     date: "2024",
     images: [Notisucess],
+    backgroundColor: "#24202B",
+    color: "#F4B393",
     slug: "notisuccess",
     company: "Selim Baouz",
-    role: "Front-End Developer",
+    role: "Development",
     construction: "Next.js, React, Tailwindcss",
     content: "Notisuccess is a generator for fake Stripe payment notifications.",
     siteUrl: "https://notisuccess.vercel.app/",
@@ -214,9 +228,11 @@ export const worksBySlugData: Case[] = [
     category: "Product",
     date: "2023",
     images: [Themify1, Themify2],
+    backgroundColor: "#C9D6FF",
+    color: "#403B4A",
     slug: "themify",
     company: "Selim Baouz",
-    role: "UX/UI Designer and FullStack Developer",
+    role: "Design/Development",
     construction: "Figma, NextJs, ReactJs, Tailwindcss, Strapi, Snipcart",
     content: "I created Themify to practice designing a fully custom e-commerce site, developed with Next.js for the front-end and Strapi for the back-end, integrating Snipcart for secure cart management.",
     siteUrl: 'https://github.com/selimbaouz/Themify',
@@ -226,23 +242,27 @@ export const worksBySlugData: Case[] = [
     category: "Shopify Custom Theme",
     date: "2023",
     images: [Maely],
+    backgroundColor: "#232526",
+    color: "#FEC9C9",
     slug: "maely",
     company: "Selim Baouz",
-    role: "Shopify Theme Creator",
+    role: "Design/Development",
     construction: "Liquid, Figma, Shopify",
-    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: sejiux.",
+    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: SLMRSV.",
     siteUrl: "https://theme-maely.myshopify.com/",
   },
   {
-    title: "Beautycare",
+    title: "Beauty\nCare",
     category: "Shopify Custom Theme",
     date: "2023",
     images: [Beautycare],
+    backgroundColor: "#ECF2F9",
+    color: "#073B4C",
     slug: "beautycare",
     company: "Selim Baouz",
-    role: "Shopify Theme Creator",
+    role: "Design/Development",
     construction: "Liquid, Figma, Shopify",
-    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: sejiux.",
+    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: SLMRSV.",
     siteUrl: "https://theme-beautycare.myshopify.com/",
   },
   {
@@ -250,11 +270,13 @@ export const worksBySlugData: Case[] = [
     category: "Shopify Custom Theme",
     date: "2023",
     images: [Bright],
+    backgroundColor: "#191716",
+    color: "#FFE066",
     slug: "bright",
     company: "Selim Baouz",
-    role: "Shopify Theme Creator",
+    role: "Design/Development",
     construction: "Liquid, Figma, Shopify",
-    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: sejiux.",
+    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: SLMRSV.",
     siteUrl: "https://theme-bright.myshopify.com/",
   },
 ];
