@@ -1,6 +1,4 @@
 import { worksBySlugData, worksData } from "@/data/work";
-import { Suspense } from "react";
-import Loading from "./loading";
 import Cases from "@/components/Cases";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -16,7 +14,6 @@ export default async function CasesPage({ params }: { params: Promise<{ slug: st
 
   return (
     <main>     
-      <Suspense fallback={<Loading />}>
         <div className={cn("sticky top-4 ml-4 h-full z-[150]")}>
           <Link
             href="/works"
@@ -33,7 +30,6 @@ export default async function CasesPage({ params }: { params: Promise<{ slug: st
           previousProjectSlug={previousProjectSlug} 
           nextProjectSlug={nextProjectSlug} 
         />
-      </Suspense>
     </main>
   );
 }
