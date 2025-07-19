@@ -266,7 +266,7 @@ const Cases = ({
           </div>
 
           {/* Pagination + liens et content animé (fade simple, garde la liste ordinale) */}
-          <div className="absolute bottom-0 w-full">
+          <div className={cn("absolute bottom-0 w-full z-50")}>
             <div
               style={{ color: cases?.color }}
               className="w-full grid grid-cols-3 items-center relative"
@@ -278,8 +278,11 @@ const Cases = ({
               >
                 {previousProjectSlug?.slug && (
                   <Link
+                    style={{
+                      border: `2px solid ${cases?.color}`
+                    }}
                     href={`/works/${previousProjectSlug.slug}`}
-                    className="font-medium text-xs xl:text-sm"
+                    className="font-medium text-xs xl:text-sm p-2 rounded-full"
                   >
                     <GoArrowLeft className="text-base lg:text-xl" />
                   </Link>
@@ -303,8 +306,11 @@ const Cases = ({
               >
                 {nextProjectSlug?.slug && (
                   <Link
+                    style={{
+                      border: `2px solid ${cases?.color}`
+                    }}
                     href={`/works/${nextProjectSlug.slug}`}
-                    className="font-medium text-xs xl:text-sm"
+                    className="font-medium text-xs xl:text-sm p-2 rounded-full"
                   >
                     <GoArrowRight className="text-base lg:text-xl" />
                   </Link>
@@ -315,7 +321,7 @@ const Cases = ({
 
           {/* Texte mobile content animé fade */}
           <motion.p
-            className={cn("lg:hidden absolute bottom-0 text-xs font-medium leading-5 text-center py-4")}
+            className={cn("lg:hidden absolute bottom-0 text-xs font-medium leading-5 text-center py-10")}
             style={{ color: cases?.color }}
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
