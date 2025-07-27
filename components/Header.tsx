@@ -2,9 +2,9 @@
 import { cn } from "@/lib/utils";
 import { useState, useEffect, useRef } from "react";
 import { useIsHydrated } from "@/hook/useIsHydrated";
-import Canva from '@/public/images/Canva.png'
+import Canva from '@/public/images/Canva.webp'
 import Portfolio from '@/public/images/gif.gif'
-import Shopify from '@/public/images/shopify-partner.png'
+import Shopify from '@/public/images/shopify-partner.webp'
 import Image from "next/image";
 import NavBarDesktop from "./navigations/NavBarDesktop";
 

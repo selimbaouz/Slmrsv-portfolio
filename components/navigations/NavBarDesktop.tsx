@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
-import Logo from "@/public/images/Logo.png";
+import Logo from "@/public/images/Logo.webp";
 import Link from 'next/link';
 import ButtonEmail from '../ButtonEmail';
 import { usePathname } from 'next/navigation';

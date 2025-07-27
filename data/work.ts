@@ -1,17 +1,18 @@
 import Themify1 from "../public/images/themify1.webp";
 import Themify2 from "../public/images/themify2.webp";
-import Bright from "../public/images/bright.png";
-import Beautycare from "../public/images/beautycare.png";
-import Maely from "../public/images/maely.png";
-import Luxurm from "../public/images/luxurm.png";
-import Bagisty from "../public/images/bagisty.png";
-import Wemom from "../public/images/wemom.png";
-import HelloPurly from "../public/images/hellopurly.png";
-import HelloPurlyMobile from "../public/images/hellopurly-mobile.png";
-import HelloPurlyMockup from "../public/images/hellopurly-cover.png";
-import Notisucess from "../public/images/notisuccess.png";
-import TailwindLiquid from "../public/images/tailwindliquid.png";
-import MosqiBlock from "../public/images/MosqiBlock.png"
+import Bright from "../public/images/bright.webp";
+import Beautycare from "../public/images/beautycare.webp";
+import Maely from "../public/images/maely.webp";
+import Luxurm from "../public/images/luxurm.webp";
+import Bagisty from "../public/images/bagisty.webp";
+import Wemom from "../public/images/wemom.webp";
+import HelloPurly from "../public/images/hellopurly.webp";
+import HelloPurlyMobile from "../public/images/hellopurly-mobile.webp";
+import HelloPurlyMockup from "../public/images/hellopurly-cover.webp";
+import Notisucess from "../public/images/notisuccess.webp";
+import TailwindLiquid from "../public/images/tailwindliquid.webp";
+import MosqiBlock from "../public/images/MosqiBlock.webp"
+import Digines from "../public/images/Digines.webp"
 import { Case } from "@/types/types";
 
 export const navLinks = [
@@ -30,6 +31,15 @@ export const worksData = [
     backgroundColor: "#222140",   
     color: "#DFCFFF",             
     slug: "mosqiblock",
+  },
+  {
+    title: "Digines",
+    category: "Portfolio",
+    date: "2025",
+    image: Digines,
+    backgroundColor: "#EFC7B1",   
+    color: "#FF4081",             
+    slug: "digines",
   },
   {
     title: "Tailwind\nLiquid",
@@ -138,6 +148,20 @@ export const worksBySlugData: Case[] = [
     construction: "Shopify, NextJs, Tailwindcss",
     content: "MosqiBlock is an online store dedicated to fighting mosquitoes, offering an innovative and effective solution to protect individuals from bites.",
     siteUrl: "https://mosqiblock.com",
+  },
+   {
+    title: "Digines",
+    category: "Portfolio",
+    date: "2025",
+    images: [Digines],
+    backgroundColor: "#EFC7B1",   
+    color: "#FF4081",  
+    slug: "digines",
+    company: "Selim Baouz",
+    role: "Design/Development",
+    construction: "NextJs, ReactJs, Tailwindcss",
+    content: "Digines is the personal portfolio of Inès, a digital copywriter based on the French Riviera. She showcases her expertise in crafting engaging and conversion-driven web content.",
+    siteUrl: "https://digines.vercel.app",
   },
    {
     title: "Tailwind\nLiquid",

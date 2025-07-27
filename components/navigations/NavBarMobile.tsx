@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import Logo from "@/public/images/Logo.png";
+import Logo from "@/public/images/Logo.webp";
 import ButtonEmail from '../ButtonEmail';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import Link from 'next/link';
