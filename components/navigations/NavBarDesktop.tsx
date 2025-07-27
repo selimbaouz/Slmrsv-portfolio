@@ -23,7 +23,7 @@ const NavBarDesktop = () => {
               />
               <p className="font-bold text-xl uppercase font-montserrat">Slmrsv</p>
               <ul className="text-lg font-medium flex ml-9 gap-9 items-center">
-                {navLinks.map((link, i) => (
+                {navLinks.slice(1).map((link, i) => (
                   <li key={i}>
                     <Link 
                       href={link.href}
