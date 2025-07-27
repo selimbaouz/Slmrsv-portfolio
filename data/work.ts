@@ -24,7 +24,7 @@ export const navLinks = [
 ]; 
 
 export const socialLinks = [
-  { href: "htttps://facebook.com/selimmersive/", label: "Facebook" },
+  { href: "https://facebook.com/selimmersive/", label: "Facebook" },
   { href: "https://linkedin.com/in/selimbaouz/", label: "Linkedin" }
 ]; 
 

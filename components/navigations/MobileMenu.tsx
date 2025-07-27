@@ -45,6 +45,20 @@ const linkVariants = {
   },
 };
 
+const buttonVariants = {
+  hidden: { opacity: 0},
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number], // Bezier = easeOut
+    },
+  },
+    exit: {
+    opacity: 0,
+  },
+};
+
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const pathname = usePathname();
   return (
@@ -52,17 +66,19 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {isOpen && (
         <motion.div
           className="fixed inset-0 bg-black text-white/50 z-50 space-y-4 flex flex-col items-center text-center px-6 lg:px-20 justify-center"
+          key="mobile-menu"  
           initial="hidden"
           animate="visible"
           exit="exit"
           variants={menuVariants}
         >
-          <button
+          <motion.button
             onClick={onClose}
-            className="absolute top-6 right-6 text-3xl text-black rounded-full bg-white p-1 hover:text-white/70 transition-colors cursor-pointer"
+            className="absolute top-6 left-6 text-3xl text-black rounded-full bg-white p-1 hover:text-white/70 transition-colors cursor-pointer"
+            variants={buttonVariants}
           >
             <HiX className="text-xl" />
-          </button>
+          </motion.button>
 
           {navLinks.map((link) => (
             <motion.div key={link.href} variants={linkVariants}>
