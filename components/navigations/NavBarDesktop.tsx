@@ -12,7 +12,7 @@ const NavBarDesktop = () => {
   const pathname = usePathname();
   
     return (
-        <nav className={cn("hidden", "lg:flex lg:justify-between lg:gap-4 z-50" )}>
+        <nav className={cn("hidden", "lg:p-6 lg:flex lg:justify-between lg:gap-4 z-50", "xl:p-0")}>
             <div className="flex items-center gap-3">
               <Image
                 src={Logo.src}

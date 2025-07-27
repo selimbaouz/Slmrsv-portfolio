@@ -16,11 +16,18 @@ import Digines from "../public/images/Digines.webp"
 import { Case } from "@/types/types";
 
 export const navLinks = [
+  { href: "/", label: "Home" },
   { href: "/works", label: "Works" },
   { href: "https://medium.com/@selimbaouz", label: "Blog" },
   { href: "/support", label: "Support" },
   { href: "/legal-notice", label: "Legal Notice" },
 ]; 
+
+export const socialLinks = [
+  { href: "htttps://facebook.com/selimmersive/", label: "Facebook" },
+  { href: "https://linkedin.com/in/selimbaouz/", label: "Linkedin" }
+]; 
+
 
 export const worksData = [
   {

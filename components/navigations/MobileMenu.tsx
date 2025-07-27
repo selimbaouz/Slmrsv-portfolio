@@ -5,7 +5,7 @@ import { HiX } from "react-icons/hi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { navLinks } from "@/data/work";
+import { navLinks, socialLinks } from "@/data/work";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -51,7 +51,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-gradient-to-r from-[#5738F4] to-[#7D2AE8] hover:bg-gradient-to-r text-white/50 z-50 space-y-2 flex flex-col items-start px-4 lg:px-20 justify-center"
+          className="fixed inset-0 bg-black text-white/50 z-50 space-y-4 flex flex-col items-center text-center px-6 lg:px-20 justify-center"
           initial="hidden"
           animate="visible"
           exit="exit"
@@ -70,7 +70,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 href={link.href}
                 onClick={onClose}
                 className={cn(
-                  "text-5xl lg:text-6xl xl:text-8xl font-semibold tracking-wide hover:text-white transition-all uppercase",
+                  "text-3xl lg:text-6xl xl:text-8xl font-semibold tracking-wide hover:text-white transition-all",
                   link.href === pathname && "text-white"
                 )}
               >
@@ -78,6 +78,24 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </Link>
             </motion.div>
           ))}
+          <div className="absolute bottom-5 flex items-center gap-3">
+            {socialLinks.map((link) => (
+              <motion.div key={link.href} variants={linkVariants}>
+                <Link
+                  href={link.href}
+                  onClick={onClose}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "text-lg font-medium tracking-wide hover:text-white transition-all",
+                    link.href === pathname && "text-white"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

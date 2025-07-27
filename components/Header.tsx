@@ -56,7 +56,7 @@ const HeaderPage = () => {
         >
           <h1
             className={cn(
-              "text-[50px] leading-12 bigTitle",
+              "text-[45px] leading-10 sm:text-[50px] sm:leading-12 bigTitle",
               "md:text-6xl md:leading-16",
               "xl:text-[80px] xl:leading-[95px]",
               "whitespace-pre-wrap",
@@ -66,7 +66,7 @@ const HeaderPage = () => {
             I create
             <br />
             <div className="pt-1 lg:pt-2">
-              <span className="font-bold uppercase md:text-8xl md:leading-20 lg:text-[110px] lg:leading-24 xl:text-[120px] xl:leading-[80px]">
+              <span className="font-bold uppercase md:text-[85px] md:leading-16 lg:text-[110px] lg:leading-24 xl:text-[115px] xl:leading-[80px]">
                 Immersive <br />{words[index]}
               </span>
             </div>
