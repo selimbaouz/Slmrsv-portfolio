@@ -279,7 +279,7 @@ export const worksBySlugData: Case[] = [
     company: "Selim Baouz",
     role: "Design/Development",
     construction: "Liquid, Figma, Shopify",
-    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: SLMRSV.",
+    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: SBZ.",
     siteUrl: "https://theme-maely.myshopify.com/",
   },
   {
@@ -293,7 +293,7 @@ export const worksBySlugData: Case[] = [
     company: "Selim Baouz",
     role: "Design/Development",
     construction: "Liquid, Figma, Shopify",
-    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: SLMRSV.",
+    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: SBZ.",
     siteUrl: "https://theme-beautycare.myshopify.com/",
   },
   {
@@ -307,7 +307,7 @@ export const worksBySlugData: Case[] = [
     company: "Selim Baouz",
     role: "Design/Development",
     construction: "Liquid, Figma, Shopify",
-    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: SLMRSV.",
+    content: "Maely, Bright, and BeautyCare are three custom Shopify themes I created to learn UX/UI design and master Liquid code. \nPassword: SBZ.",
     siteUrl: "https://theme-bright.myshopify.com/",
   },
 ];

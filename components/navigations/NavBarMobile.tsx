@@ -20,7 +20,7 @@ const NavBarMobile = () => {
                     </div>
                     <Link href="/" className='flex gap-2 items-center'>
                         <Image src={Logo.src} alt="Logo" width={Logo.width} height={Logo.height} className={cn("w-auto h-6")} />
-                        <p className={cn("text-white font-bold text-lg uppercase")}>Slmrsv</p>
+                        <p className={cn("text-white font-bold text-lg uppercase")}>SBZ</p>
                     </Link>
                 </div>
                 <ButtonEmail isMobile />
