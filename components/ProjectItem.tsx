@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { WorksData } from "@/types/types";
 import { forwardRef, useRef, useImperativeHandle } from "react";
@@ -23,20 +23,11 @@ export const ProjectItem = forwardRef<HTMLDivElement, ProjectItemProps>(
       refCb(node);
     };
 
-    // Correction ESLint/TS : on passe bien un refObj de type {current: HTMLDivElement | null}
-    const { scrollYProgress } = useScroll({
-      target: localRef as React.RefObject<HTMLDivElement>,
-      offset: ["start 80%", "end start"],
-    });
-
-    const y = useTransform(scrollYProgress, [0, 1], ["100px", "-100px"]);
-    const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.85, 1, 0.9]);
-
     return (
       <motion.div
         ref={innerRef}
         className="flex flex-col cursor-pointer items-center transition-all duration-700"
-        style={{ y, scale, opacity: 1 }}
+        style={{ opacity: 1 }}
       >
         <Link href={`/works/${work.slug}`}>
           <Image

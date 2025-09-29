@@ -12,6 +12,9 @@ import HelloPurlyMockup from "../public/images/hellopurly-cover.webp";
 import Notisucess from "../public/images/notisuccess.webp";
 import TailwindLiquid from "../public/images/tailwindliquid.webp";
 import MosqiBlock from "../public/images/MosqiBlock.webp"
+import Capture from "../public/images/pat_capture.webp"
+import Palette from "../public/images/palette.webp"
+import Tints from "../public/images/tints.webp"
 import Digines from "../public/images/Digines.webp"
 import { Case } from "@/types/types";
 
@@ -24,12 +27,20 @@ export const navLinks = [
 ]; 
 
 export const socialLinks = [
-  { href: "https://facebook.com/selimmersive/", label: "Facebook" },
   { href: "https://linkedin.com/in/selimbaouz/", label: "Linkedin" }
 ]; 
 
 
 export const worksData = [
+  {
+    title: "Palette &\nTints",
+    category: "Canva App",
+    date: "2025",
+    image: Palette,
+    backgroundColor: "#F0D3B8",   
+    color: "#FF6D6D",             
+    slug: "paletteandtints",
+  },
   {
     title: "Mosqi\nBlock",
     category: "Shopify Headless",
@@ -143,6 +154,20 @@ export const worksData = [
 
 export const worksBySlugData: Case[] = [
    {
+    title: "Palette &\nTints",
+    category: "Canva App",
+    date: "2025",
+    images: [Palette, Tints, Capture],
+    backgroundColor: "#F0D3B8",   
+    color: "#FF6D6D",  
+    slug: "paletteandtints",
+    company: "Canva",
+    role: "Design/Development",
+    construction: "Canva SDK, ReactJs, Typescript",
+    content: "After months of work and collaboration with the Canva team, I'm thrilled to present my very first Canva app: Palette and Tints, now available on the Canva App Store! This app lets you automatically generate a color palette from a chosen color and create all its associated tints.",
+    siteUrl: "",
+  },
+  {
     title: "Mosqi\nBlock",
     category: "Ecommerce",
     date: "2025",

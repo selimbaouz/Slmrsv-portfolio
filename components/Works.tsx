@@ -60,7 +60,7 @@ const Works = ({ works }: { works: WorksData[] }) => {
         </div>
 
         {/* PROJETS */}
-        <div className="relative z-10 space-y-20 py-44 lg:py-0">
+        <div className="relative z-10 space-y-44 py-44 lg:py-0">
           {works.map((work, i) => {
             const refCallback = (el: HTMLDivElement | null) => {
               projectRefs.current[i] = el;
