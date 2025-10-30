@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect } from "react";
 import { Montserrat } from "next/font/google";
-/* import { menuStore } from "@/stores"; */
 import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
@@ -74,7 +73,6 @@ const LayoutClient = ({
     >
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet" />
       </Head>
       <body className={cn(montserrat.variable, "relative bg-background font-sans antialiased")}>
         <CircleMouse />

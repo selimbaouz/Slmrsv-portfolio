@@ -2,19 +2,18 @@
 import { cn } from "@/lib/utils";
 import { useState, useEffect, useRef } from "react";
 import { useIsHydrated } from "@/hook/useIsHydrated";
-import Canva from '@/public/images/Canva.webp'
 import Portfolio from '@/public/images/gif.gif'
-import Shopify from '@/public/images/shopify-partner.webp'
 import Image from "next/image";
 import NavBarDesktop from "./navigations/NavBarDesktop";
 
 const words = [
-  "Ecommerce", 
-  "SaaS", 
-  "Products", 
+  "Stores", 
+  "Themes", 
   "Apps",
+  "Solutions",
+  "Custom",
+  "Headless", 
   "Experiences",
-  "Solutions"
 ];
 
 const HeaderPage = () => {
@@ -67,14 +66,15 @@ const HeaderPage = () => {
             <br />
             <div className="pt-1 lg:pt-2">
               <span className="font-bold uppercase md:text-[85px] md:leading-16 lg:text-[110px] lg:leading-24 xl:leading-[60px]">
-                Immersive <br />{words[index]}
+                Shopify <br />{words[index]}
               </span>
             </div>
           </h1>
           <div className="border w-full border-white" />
-            <div className="pb-2  md:pb-6 lg:pb-10 xl:pb-0 flex items-center gap-2 lg:gap-4">
-                <Image src={Canva.src} alt="Canva Partner" className="w-auto h-9 lg:h-12 xl:h-14 rounded-full" width={Canva.width} height={Canva.height} />
-                <Image src={Shopify.src} alt="Shopify Partner" className="w-auto h-9 lg:h-12 xl:h-14" width={Shopify.width} height={Shopify.height} />
+            <div className="pb-2  md:pb-6 lg:pb-10 xl:pb-0">
+                <div className="flex items-center gap-2 italic">
+                  <p className="font-bold text-sm lg:text-lg">Shopify <span className="font-light">Developer</span></p>
+                </div>
             </div>
         </div>
       </div>

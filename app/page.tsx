@@ -36,7 +36,7 @@ export default function Home() {
           <div className={cn("sticky top-0 z-[150]")}>
             <NavBarMobile />
           </div>
-        <div className="bg-black flex flex-col">
+        <div className="bg-[#111] flex flex-col">
           <Header />
         </div>
     </Suspense>

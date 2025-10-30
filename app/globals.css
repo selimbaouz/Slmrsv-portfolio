@@ -60,7 +60,7 @@ html.lenis, html.lenis body {
 }
 
 html {
-  background-color: black;
+  background-color: #111118;
 }
 body {
   font-family: var(--font-ms),  sans-serif;
@@ -166,7 +166,7 @@ body {
 }
 
 .dark {
-  --background: #000;
+  --background: #111118;
   --foreground: #F8F4F0;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
