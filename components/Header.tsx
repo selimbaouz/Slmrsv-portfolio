@@ -65,7 +65,7 @@ const HeaderPage = () => {
             <br />
             <div className="pt-1 lg:pt-2">
               <span className="font-bold uppercase md:text-[85px] md:leading-16 lg:text-[110px] lg:leading-24 xl:leading-[60px]">
-                Shopify <br />{words[index]}
+                E-commerce <br />{words[index]}
               </span>
             </div>
           </h1>
