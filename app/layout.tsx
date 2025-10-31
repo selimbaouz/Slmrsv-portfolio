@@ -8,25 +8,26 @@ import LayoutClient from "@/components/LayoutClient";
 
 export const metadata: Metadata = {
   title: {
-    default: "Selim Baouz | Multidisciplinary Developer",
-    template: "%s | Selim Baouz"
+    default: "Shopify Developer | Liquid, Hydrogen & Headless (Next.js) | Selim Baouz",
+    template: "%s | Selim Baouz",
   },
-  description: "Passionate multidisciplinary developer specializing in digital products, SaaS, and headless e-commerce with Next.js and Shopify.",
+  description:
+    "I build custom, high-performance and pixel-perfect Shopify stores, specializing in Liquid, Hydrogen, and headless architectures with Next.js to deliver tailored e-commerce solutions.",
   keywords: [
-    "full-stack developer",
-    "e-commerce developer",
-    "shopify headless",
-    "next developer",
-    "react developer",
-    "headless commerce",
+    "Shopify developer",
+    "Liquid",
+    "Hydrogen",
+    "Headless commerce",
+    "Headless Shopify",
+    "Next.js developer",
+    "Custom Shopify stores",
+    "E-commerce development",
+    "High-performance web",
+    "Pixel-perfect design",
+    "Shopify themes",
+    "Shopify apps",
+    "React developer",
     "SaaS development",
-    "web development",
-    "UX/UI design",
-    "web design",
-    "3D design",
-    "SEO optimization",
-    "freelance developer",
-    "digital product creation"
   ],
   authors: [{ name: "Selim Baouz" }],
   creator: "Selim Baouz",
@@ -37,23 +38,27 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://selimbaouz.com",
     siteName: "Selim Baouz",
-    title: "Selim Baouz | Multidisciplinary Developer",
-    description: "Specialized in SaaS and headless e-commerce development, I help brands create high-performance, tailor-made digital experiences.",
+    title:
+      "Shopify Developer | Liquid, Hydrogen & Headless (Next.js) - Custom, high-performance stores]",
+    description:
+      "Specialized in building custom, pixel-perfect Shopify e-commerce experiences using advanced headless techniques with Next.js and Shopify Hydrogen.",
     images: [
       {
         url: "https://selimbaouz.com/images/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Selim Baouz - Multidisciplinary Developer"
-      }
+        alt: "Selim Baouz - Shopify Developer and Headless Commerce Specialist",
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@selimbaouz",
     creator: "@selimbaouz",
-    title: "Selim Baouz | Multidisciplinary Developer",
-    description: "Specialized in SaaS and headless e-commerce development, I help brands create high-performance, tailor-made digital experiences.",
+    title:
+      "Shopify Developer | Liquid, Hydrogen & Headless (Next.js) | Custom high-performance stores",
+    description:
+      "Expert in Shopify development, specializing in Liquid, Hydrogen, and headless commerce architectures with Next.js.",
     images: ["https://selimbaouz.com/images/og-image.webp"],
   },
   verification: {
@@ -63,7 +68,6 @@ export const metadata: Metadata = {
     canonical: "https://selimbaouz.com",
   },
 };
-
 
 export default function RootLayout({
   children,

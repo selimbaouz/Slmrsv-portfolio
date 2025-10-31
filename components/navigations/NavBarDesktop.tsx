@@ -14,7 +14,7 @@ const NavBarDesktop = () => {
     return (
         <nav className={cn("hidden", "lg:p-6 lg:flex lg:justify-between lg:gap-4 z-50", "xl:p-0")}>
             <div className="flex items-center gap-3">
-              <Link href="https://linkedin.com/in/selimbaouz/" className='flex items-center gap-3'>
+              <Link href="/profile" className='flex items-center gap-3'>
                 <Image
                   src={Logo.src}
                   alt="Logo"

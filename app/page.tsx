@@ -1,16 +1,15 @@
+"use client";
 import { Suspense } from "react";
 import { JsonLd } from 'react-schemaorg';
 import Header from "@/components/Header";
 import NavBarMobile from "@/components/navigations/NavBarMobile";
 import { cn } from "@/lib/utils";
-/* import { worksData } from "@/data/work";
-import { articlesData } from "@/data/articles";
-import Works from "@/components/Works";
-import News from "@/components/News";
-import About from "@/components/About"; */
+import { navLinks } from "@/data/work";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
-
+const pathname = usePathname();
   <>
     <JsonLd
       item={{
@@ -18,7 +17,7 @@ export default function Home() {
         "@type": "Organization",
         name: "selimbaouz",
         url: "https://selimbaouz.com",
-        logo: "https://selimbaouz.com/images/sejiux.webp",
+        logo: "https://selimbaouz.com/images/Logo.webp",
         description: "Je crée des boutiques en ligne headless sur mesure, combinant design unique et performance.",
         sameAs: [
           "https://twitter.com/selimbaouz",
@@ -39,6 +38,17 @@ export default function Home() {
         <div className="bg-[#111] flex flex-col">
           <Header />
         </div>
+        <ul className="font-medium p-6 flex gap-4 items-center">
+          {navLinks.slice(1).map((link, i) => (
+            <li key={i}>
+              <Link
+                href={link.href}
+                className={cn("text-white/60 text-[13px] font-semibold hover:underline", link.href === pathname && "text-white")}>
+              {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
     </Suspense>
   );
 }

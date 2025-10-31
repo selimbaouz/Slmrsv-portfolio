@@ -9,7 +9,6 @@ import NavBarDesktop from "./navigations/NavBarDesktop";
 const words = [
   "Stores", 
   "Themes", 
-  "Apps",
   "Solutions",
   "Custom",
   "Headless", 
