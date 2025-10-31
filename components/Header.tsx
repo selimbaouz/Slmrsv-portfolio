@@ -13,6 +13,7 @@ const words = [
   "Custom",
   "Headless", 
   "Experiences",
+  "Designs",
 ];
 
 const HeaderPage = () => {
