@@ -38,7 +38,7 @@ const pathname = usePathname();
         <div className="bg-[#111] flex flex-col">
           <Header />
         </div>
-        <ul className="font-medium p-6 flex gap-4 items-center">
+        <ul className="font-medium p-6 flex gap-4 items-center md:hidden">
           {navLinks.slice(1).map((link, i) => (
             <li key={i}>
               <Link
