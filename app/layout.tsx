@@ -8,26 +8,29 @@ import LayoutClient from "@/components/LayoutClient";
 
 export const metadata: Metadata = {
   title: {
-    default: "Shopify Developer | Liquid, Hydrogen & Headless (Next.js) | Selim Baouz",
+    default: "Selim Baouz | Multidisciplinary Developer: Shopify, SaaS & Headless Solutions",
     template: "%s | Selim Baouz",
   },
   description:
-    "I build custom, high-performance and pixel-perfect Shopify stores, specializing in Liquid, Hydrogen, and headless architectures with Next.js to deliver tailored e-commerce solutions.",
+    "I'm Selim Baouz, a multidisciplinary developer crafting custom Shopify stores, SaaS solutions, and Canva Apps. With 7+ years of experience, I blend code, design, and user experience to build high-performance applications tailored to your business needs.",
   keywords: [
+    "Selim Baouz",
+    "Multidisciplinary developer",
     "Shopify developer",
     "Liquid",
     "Hydrogen",
-    "Headless commerce",
     "Headless Shopify",
     "Next.js developer",
     "Custom Shopify stores",
-    "E-commerce development",
-    "High-performance web",
-    "Pixel-perfect design",
-    "Shopify themes",
+    "SaaS solutions",
+    "Canva apps",
+    "UI/UX",
+    "High-performance apps",
+    "Web development",
+    "E-commerce",
     "Shopify apps",
     "React developer",
-    "SaaS development",
+    "Headless commerce",
   ],
   authors: [{ name: "Selim Baouz" }],
   creator: "Selim Baouz",
@@ -39,15 +42,15 @@ export const metadata: Metadata = {
     url: "https://selimbaouz.com",
     siteName: "Selim Baouz",
     title:
-      "Shopify Developer | Liquid, Hydrogen & Headless (Next.js) - Custom, high-performance stores]",
+      "Selim Baouz – Multidisciplinary Shopify & SaaS Developer",
     description:
-      "Specialized in building custom, pixel-perfect Shopify e-commerce experiences using advanced headless techniques with Next.js and Shopify Hydrogen.",
+      "Selim Baouz specializes in custom Shopify stores, modern SaaS solutions, and Canva app development. Creating seamless digital experiences where code, design and real user needs meet.",
     images: [
       {
         url: "https://selimbaouz.com/images/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Selim Baouz - Shopify Developer and Headless Commerce Specialist",
+        alt: "Selim Baouz - Multidisciplinary Developer, Shopify & SaaS Specialist",
       },
     ],
   },
@@ -56,9 +59,9 @@ export const metadata: Metadata = {
     site: "@selimbaouz",
     creator: "@selimbaouz",
     title:
-      "Shopify Developer | Liquid, Hydrogen & Headless (Next.js) | Custom high-performance stores",
+      "Selim Baouz | Multidisciplinary Shopify, SaaS & Headless Developer",
     description:
-      "Expert in Shopify development, specializing in Liquid, Hydrogen, and headless commerce architectures with Next.js.",
+      "Experienced developer building custom Shopify stores, SaaS applications, and Canva Apps — specialist in headless architectures and user-first experiences.",
     images: ["https://selimbaouz.com/images/og-image.webp"],
   },
   verification: {

@@ -10,7 +10,6 @@ import { usePathname } from "next/navigation";
 
 export default function Home() {
 const pathname = usePathname();
-  <>
     <JsonLd
       item={{
         "@context": "https://schema.org",
@@ -18,7 +17,7 @@ const pathname = usePathname();
         name: "selimbaouz",
         url: "https://selimbaouz.com",
         logo: "https://selimbaouz.com/images/Logo.webp",
-        description: "Je crée des boutiques en ligne headless sur mesure, combinant design unique et performance.",
+        description: "Multidisciplinary developer: I create custom Shopify stores, SaaS solutions, and Canva applications, where code, design, and user experience come together.",
         sameAs: [
           "https://twitter.com/selimbaouz",
           "https://github.com/selimbaouz",
@@ -28,7 +27,7 @@ const pathname = usePathname();
           "https://facebook.com/selimbaouz",
         ]
       }}
-    /></>;
+    />
   
   return (
     <Suspense>

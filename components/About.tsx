@@ -9,12 +9,11 @@ const About = () => {
             <p className={cn("text-sm", "lg:text-base")}>
                 Welcome to my profile 👋
                 <br /><br />
-                I{"'"}m Selim, a Shopify Developer and
-                a Fullstack Developer with a passion for cognitive psychology and neuroscience applied to UX.
+                I{"'"}m Selim, a Multidisciplinary Developer. I build custom Shopify stores, SaaS solutions, and Canva Apps.
                 <br /><br />
-                Over 7 years of experience in application development, SaaS, and headless Shopify stores.
+                With over 7 years of experience, I specialize in crafting applications and headless Shopify stores that blend code, design, and user experience.
                 <br /><br />
-                I enjoy creating products where code, design, and behavior work in harmony.
+                My passion lies in creating products where technology and design meet real user needs.
             </p>
             <Separator className="my-6 lg:max-w-4xl" />
             <div className='space-y-6'>
