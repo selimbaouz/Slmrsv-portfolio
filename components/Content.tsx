@@ -17,7 +17,8 @@ const Content = () => {
   const categoriesDropdownRef = useRef<HTMLDivElement>(null);
   const {searchQuery} = useSnippetsFiltered();
 
-  const categories = ["All projects", "Shopify Headless", "Shopify Custom", "Design"];
+  // Adapted categories to reflect actual content in data/index.ts
+  const categories = ["All projects", "Shopify Headless", "Portfolio", "Design", "App Canva"];
 
   const filteredTemplates = templates.filter((template) => {
     const matchCategory =
@@ -25,10 +26,12 @@ const Content = () => {
     /* const matchModel =
       selectedModel === "Models" || template.type === selectedModel; */
     const matchSearch =
-      template.category.toLowerCase().includes(searchQuery.toLowerCase());
-  
+      template.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      template.name.toLowerCase().includes(searchQuery.toLowerCase());
+
     return matchCategory /* && matchModel */ && matchSearch;
   });
+
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

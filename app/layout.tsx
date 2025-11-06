@@ -85,7 +85,7 @@ export default function RootLayout({
         >
         <SpeedInsights />
         <Analytics />
-          <div className="min-h-[100dvh] flex-1 flex flex-col relative">{children}</div>  
+          <div className={`min-h-[100dvh] flex-1 flex flex-col relative font-montserrat`}>{children}</div>  
         </ThemeProvider>
       </LayoutClient>
   );

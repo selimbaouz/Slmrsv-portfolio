@@ -10,10 +10,11 @@ const words = [
   "Stores", 
   "Themes", 
   "Solutions",
-  "Custom",
-  "Headless", 
+  "SaaS",
+  "Products",
   "Experiences",
   "Designs",
+  "E-commerce",
   "Apps",
 ];
 
@@ -67,14 +68,15 @@ const HeaderPage = () => {
             <br />
             <div className="pt-1 lg:pt-2">
               <span className="font-bold uppercase md:text-[85px] md:leading-16 lg:text-[110px] lg:leading-24 xl:leading-[60px]">
-                E-commerce <br />{words[index]}
+                awesome <br />{words[index]}
               </span>
             </div>
           </h1>
           <div className="border w-full border-white" />
-            <div className="pb-2  md:pb-6 lg:pb-10 xl:pb-0">
-                <div className="flex items-center gap-2 italic">
-                  <p className="font-bold text-sm lg:text-lg">Shopify <span className="font-light">Developer</span></p>
+            <div className="pb-2 md:pb-6 lg:pb-10 xl:pb-0 flex items-center gap-2">
+                <div className="flex items-center gap-1 italic">
+                  <Image src="/images/canva_white.png" alt="Canva" width={1080} height={1080} className="w-10 md:w-16 h-4 md:h-5" /> 
+                  <p className="font-bold text-sm lg:text-lg"><span className="font-light">&</span> Shopify <span className="font-light">Developer</span></p>
                 </div>
             </div>
         </div>
