@@ -25,7 +25,7 @@ export default function Home() {
           <h1 className={cn("text-2xl font-semibold", "md:text-[32px]")}>Selim Baouz</h1>
           <div className={cn("flex flex-col gap-2 text-sm -mt-1 lg:-mt-2")}>
             <p className={cn("text-white/60")}>@selimbaouz</p>
-            <p className={cn("text-white/60 py-2 leading-6 lg:leading-5 lg:text-base")}>Multidisciplinary Developer | I build custom Shopify stores, Saas solutions and Canva App.</p>
+            <p className={cn("text-white/60 py-2 leading-6 lg:leading-5 lg:text-base")}>Multidisciplinary Developer | I build custom Shopify stores, SaaS and Canva App.</p>
           </div>
           <div className={cn("grid grid-cols-2 w-full items-center gap-2", "md:w-max")}>
             <Button asChild color="primary" size="lg" className={cn("bg-gradient-to-r from-[#5738F4] to-[#7D2AE8] hover:bg-gradient-to-r hover:from-white hover:to-white hover:text-black text-white mt-2 cursor-pointer", "lg:text-sm")}>
