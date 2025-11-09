@@ -72,8 +72,8 @@ const HeaderPage = () => {
             </div>
           </h1>
           <div className="border w-full border-white" />
-            <div className="flex items-center gap-x-1 h-full">
-                  <Image src="/images/canva_white.png" alt="Canva" width={1080} height={1080} className="w-11 min-h-full md:w-15" /> 
+            <div className="flex items-center gap-1">
+                <Image src="/images/canva_white.png" alt="Canva" width={1080} height={1080} className="w-11 min-h-full md:w-14" /> 
                 <div className="flex items-center italic">
                   <p className="font-bold text-sm lg:text-lg"><span className="font-light not-italic">&</span> Shopify <span className="font-light">Developer</span></p>
                 </div>
