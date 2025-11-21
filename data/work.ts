@@ -1,5 +1,13 @@
+export const brandsData = [
+  { image: "/images/db.avif", alt: "Dectective Box Logo" },
+  { image: "/images/paalm.png", alt: "Paalm Logo" },
+  { image: "/images/mushngo.png", alt: "MushnGo Logo" },
+  { image: "/images/moea.png", alt: "Moea Logo" },
+];
+
 export const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/profile", label: "Works" },
   { href: "https://medium.com/@selimbaouz", label: "Blog" },
   { href: "/support", label: "Support" },
   { href: "/legal-notice", label: "Legal Notice" },

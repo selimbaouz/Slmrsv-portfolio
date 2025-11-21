@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Content from "@/components/Content";
 import About from "@/components/About";
+import { IoLogoLinkedin } from "react-icons/io5";
 
 export default function Home() {
   const [isLinkSelected, setIsLinkSelected] = useState(0);
@@ -34,7 +35,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                See More on LinkedIn
+                See My Profile <IoLogoLinkedin />
               </Link>
             </Button>
             <Button asChild size="lg" variant="link" className={cn("text-white mt-2 border cursor-pointer", "lg:text-sm")}> 

@@ -5,14 +5,14 @@ import { useIsHydrated } from "@/hook/useIsHydrated";
 import Portfolio from '@/public/images/gif.gif'
 import Image from "next/image";
 import NavBarDesktop from "./navigations/NavBarDesktop";
+import MarqueeStack from "./MarqueeStack";
+import Link from "next/link";
+import HoverIcon from "./HoverIcon";
 
 const words = [
   "Stores", 
   "Themes", 
-  "Solutions",
   "SaaS",
-  "Products",
-  "Experiences",
   "Designs",
   "Apps",
 ];
@@ -47,7 +47,7 @@ const HeaderPage = () => {
       )}
     >
       <div className="lg:flex lg:flex-col lg:justify-between lg:h-full">
-         <NavBarDesktop />
+        <NavBarDesktop />
         <div
           className={cn(
             "p-6 space-y-6",
@@ -63,28 +63,46 @@ const HeaderPage = () => {
               "text-foreground text-left"
             )}
           >
+            <span className="font-light">
             I create
+            </span>
             <br />
             <div className="pt-1 lg:pt-2">
               <span className="font-bold uppercase md:text-[85px] md:leading-16 lg:text-[110px] lg:leading-24 xl:leading-[60px]">
-                awesome <br />{words[index]}
+                awesome<br />{words[index]}
               </span>
             </div>
           </h1>
-          <div className="border w-full border-white" />
-            <div className="flex items-center gap-1">
-                <Image src="/images/canva_white.png" alt="Canva" width={1080} height={1080} className="w-11 min-h-full md:w-14" /> 
-                <div className="flex items-center italic">
-                  <p className="font-bold text-sm lg:text-lg"><span className="font-light not-italic">&</span> Shopify <span className="font-light">Developer</span></p>
-                </div>
+          <div className="border w-full border-white/20" />
+          <div>
+            {/* <div className="flex items-center gap-1">
+              <Image src="/images/canva_white.png" alt="Canva" width={1080} height={1080} className="w-11 min-h-full md:w-14" /> 
+              <div className="flex items-center italic">
+                <p className="font-bold text-sm lg:text-lg"><span className="font-light not-italic">&</span> Shopify <span className="font-light">Developer</span></p>
+              </div>
+            </div> */}
+            <div className={cn("flex flex-col gap-6 lg:gap-8")}>
+              <div className="text-white/50 font-medium text-sm lg:text-base flex items-center gap-2">Member of 
+                <Link href="https://uxhover.co" rel="noopener noreferrer" target="_blank" className="uppercase text-white font-bold hover:underline hover:text-[#d4ff4b] flex items-center gap-1">
+                  <HoverIcon 
+                    width={20} 
+                    height={20} 
+                    className="hover:fill-[#d4ff4b]" 
+                  /> 
+                  Hover
+                </Link> 
+                <span className="text-white/50 font-medium text-sm lg:text-base">for brands like</span>
+              </div>
+              <MarqueeStack title={false} />
             </div>
+          </div>
         </div>
       </div>
       <div className="flex flex-col justify-end size-full">
         <Image 
           src={Portfolio.src} 
           alt="Portfolio Partner" 
-          className="w-full h-[430px] object-cover md:w-screen md:h-full xl:h-[97%] xl:w-[47%] bg-gray-200/30 xl:rounded-3xl xl:absolute xl:top-4 xl:right-4" 
+          className="w-auto h-[430px] object-cover md:w-screen md:h-full xl:h-[97%] xl:w-[47%] bg-gray-200/30 xl:rounded-3xl xl:absolute xl:top-4 xl:right-4" 
           width={Portfolio.width} 
           height={Portfolio.height} 
         />

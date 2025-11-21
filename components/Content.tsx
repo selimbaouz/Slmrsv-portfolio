@@ -18,7 +18,7 @@ const Content = () => {
   const {searchQuery} = useSnippetsFiltered();
 
   // Adapted categories to reflect actual content in data/index.ts
-  const categories = ["All projects", "Shopify Headless", "Portfolio", "Design", "App Canva"];
+  const categories = ["All projects", "Shopify Headless", "Design", "App Canva"];
 
   const filteredTemplates = templates.filter((template) => {
     const matchCategory =
