@@ -82,9 +82,9 @@ const HeaderPage = () => {
               </div>
             </div> */}
             <div className={cn("flex flex-col gap-6 lg:gap-8")}>
-              <div className="text-white/50 font-medium text-sm lg:text-base flex items-center gap-2">
+              <div className="text-white/50 font-medium text-sm lg:text-base flex items-center gap-1">
                 Shopify <span className="hxs:hidden">Dev</span><span className="hidden hxs:block">Developer</span> at
-                <Link href="https://uxhover.co" rel="noopener noreferrer" target="_blank" className="uppercase text-white font-bold hover:underline hover:text-[#d4ff4b] flex items-center gap-1">
+                <Link href="https://uxhover.co" rel="noopener noreferrer" target="_blank" className="uppercase text-white font-bold hover:underline hover:text-[#d4ff4b] flex items-center gap-1 pr-0.5 pl-1">
                   <HoverIcon 
                     width={20} 
                     height={20} 
