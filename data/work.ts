@@ -3,6 +3,7 @@ export const brandsData = [
   { image: "/images/paalm.png", alt: "Paalm Logo" },
   { image: "/images/mushngo.png", alt: "MushnGo Logo" },
   { image: "/images/moea.png", alt: "Moea Logo" },
+  { image: "/images/petiscope_logo.png", alt: "Petiscope Logo" },
 ];
 
 export const navLinks = [
@@ -11,11 +12,11 @@ export const navLinks = [
   { href: "https://medium.com/@selimbaouz", label: "Blog" },
   { href: "/support", label: "Support" },
   { href: "/legal-notice", label: "Legal Notice" },
-]; 
+];
 
 export const socialLinks = [
-  { href: "https://linkedin.com/in/selimbaouz/", label: "Linkedin" }
-]; 
+  { href: "https://linkedin.com/in/selimbaouz/", label: "Linkedin" },
+];
 
 export const legalsPagesData = (handle: string) => {
   switch (handle) {
