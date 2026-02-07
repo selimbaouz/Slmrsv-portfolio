@@ -22,7 +22,7 @@ const NavBarDesktop = () => {
                   height={Logo.height}
                   className="w-auto h-9 rounded-full"
                 />
-                <p className="font-bold font-montserrat text-xl uppercase">sbaouz</p>
+                <p className="font-bold font-montserrat text-xl">SLMRSV</p>
               </Link>
               <ul className="font-medium flex ml-9 gap-9 items-center">
                 {navLinks.slice(1).map((link, i) => (

@@ -1,21 +1,16 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { Montserrat } from "next/font/google";
+import { Manrope, Montserrat, Quicksand } from "next/font/google";
 import useMouseFollower from "@/animations/useMouseFollower";
 import Head from "next/head";
 import CircleMouse from "./CircleMouse";
 
-const montserrat = Montserrat({
+const montserrat = Montserrat ({
   weight: [
-    "100",
-    "200",
     "300",
     "400",
     "500",
-    "600",
-    "700",
-    "800",
-    "900",
+    "600"
   ],
   subsets: ["latin"],
   variable: "--font-ms",

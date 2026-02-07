@@ -10,11 +10,11 @@ import Link from "next/link";
 import HoverIcon from "./HoverIcon";
 
 const words = [
-  "Stores", 
-  "Themes", 
+  "Ecommerce",
+  "Shopify",
   "SaaS",
-  "Designs",
-  "Apps",
+  "Checkout",
+  "Brands",
 ];
 
 const HeaderPage = () => {
@@ -43,7 +43,7 @@ const HeaderPage = () => {
       id="home"
       className={cn(
         "overflow-hidden relative size-full grid grid-rows-2 justify-start items-end",
-        "xl:grid-cols-2 xl:items-end xl:grid-rows-1 xl:h-[100dvh] xl:px-20 xl:py-14"
+        "xl:grid-cols-2 xl:items-end xl:grid-rows-1 xl:h-dvh xl:px-20 xl:py-14"
       )}
     >
       <div className="lg:flex lg:flex-col lg:justify-between lg:h-full">
@@ -56,20 +56,20 @@ const HeaderPage = () => {
         >
           <h1
             className={cn(
-              "text-[45px] leading-10 sm:text-[50px] sm:leading-12 bigTitle",
-              "md:text-6xl md:leading-16",
-              "xl:text-[80px] xl:leading-[95px]",
+              "text-[38px] leading-9 sm:text-[50px] sm:leading-12 bigTitle z-50",
+              "lg:text-[45px] lg:leading-10",
+              "xl:text-[70px] xl:leading-[85px]",
               "whitespace-pre-wrap",
               "text-foreground text-left"
             )}
           >
-            <span className="font-light">
-            I create
+            <span className="font-extralight">
+            Immersive
             </span>
             <br />
             <div className="pt-1 lg:pt-2">
-              <span className="font-bold uppercase md:text-[85px] md:leading-16 lg:text-[110px] lg:leading-24 xl:leading-[60px]">
-                awesome<br />{words[index]}
+              <span className="font-extrabold uppercase text-[40px] md:text-[85px] md:leading-16 lg:text-[100px] lg:leading-20 xl:text-[95px] xl:leading-[40px]">
+              {words[index]}<br />Experiences
               </span>
             </div>
           </h1>

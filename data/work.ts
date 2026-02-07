@@ -8,7 +8,6 @@ export const brandsData = [
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/profile", label: "Works" },
   { href: "https://medium.com/@selimbaouz", label: "Blog" },
   { href: "/support", label: "Support" },
   { href: "/legal-notice", label: "Legal Notice" },

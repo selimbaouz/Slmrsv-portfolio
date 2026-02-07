@@ -1,31 +1,24 @@
 export const templates = [
   {
-    name: "EcomCodeHub",
-    imageUrl: "/images/ecomcodehub.png",
-    url: "https://ecomcodehub.com",
-    category: "Shopify",
-    index: 0,
-  },
-  {
     name: "Detective Box",
     imageUrl: "/images/db_desktop.png",
     url: "https://detectivebox.com",
     category: "Shopify",
-    index: 1,
+    index: 0,
   },
   {
     name: "Paalm",
     imageUrl: "/images/paalm_desktop.png",
     url: "https://paalm.co",
     category: "Shopify",
-    index: 2,
+    index: 1,
   },
   {
     name: "Petiscope",
     imageUrl: "/images/petiscope.png",
     url: "https://petiscope.fr",
     category: "Shopify",
-    index: 3,
+    index: 2,
   },
   /*   {
     name: "Moea",
@@ -68,26 +61,5 @@ export const templates = [
     url: "",
     category: "Shopify",
     index: 7,
-  },
-  {
-    name: "Kabriol",
-    imageUrl: "/images/kabriol.png",
-    url: "https://webkabriol.fr",
-    category: "Website",
-    index: 8,
-  },
-  {
-    name: "7/14",
-    imageUrl: "/images/7_11.png",
-    url: "",
-    category: "3D",
-    index: 9,
-  },
-  {
-    name: "Didi",
-    imageUrl: "/images/didi.png",
-    url: "",
-    category: "3D",
-    index: 10,
   },
 ];
