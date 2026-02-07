@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { Manrope, Montserrat, Quicksand } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import useMouseFollower from "@/animations/useMouseFollower";
 import Head from "next/head";
 import CircleMouse from "./CircleMouse";
