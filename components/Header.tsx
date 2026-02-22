@@ -64,7 +64,7 @@ const HeaderPage = () => {
             )}
           >
             <span className="font-extralight">
-            Immersive
+            I create
             </span>
             <br />
             <div className="pt-1 lg:pt-2">
