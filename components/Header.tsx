@@ -13,8 +13,9 @@ const words = [
   "Ecommerce",
   "Shopify",
   "SaaS",
-  "Checkout",
+  "Custom",
   "Brands",
+  "Headless",
 ];
 
 const HeaderPage = () => {
