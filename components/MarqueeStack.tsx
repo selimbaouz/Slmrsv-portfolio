@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { FC } from "react";
 import Image from "next/image";
 import { Marquee } from "./ui/marquee";
+import Link from "next/link";
 
 interface MarqueeStackProps {
   reverse?: boolean;
@@ -17,14 +18,16 @@ const MarqueeStack: FC<MarqueeStackProps> = ({
   const isHydrated = useIsHydrated();
 
   const renderIcon = (data: typeof brandsData[0], index: number) => (
-    <Image 
-      key={index} 
-      src={data.image} 
-      alt={data.alt} 
-      width={1080} 
-      height={1080} 
-      className="max-w-[70px] h-auto object-cover sm:max-w-[80px] lg:max-w-[100px]" 
-    />
+    <Link href={data.link} target="_blank" rel="noopener noreferrer" className="opacity-50 hover:opacity-100 transition-opacity duration-300">
+      <Image 
+        key={index} 
+        src={data.image} 
+        alt={data.alt} 
+        width={1080} 
+        height={1080} 
+        className="max-w-[70px] h-auto object-cover sm:max-w-[80px] lg:max-w-[100px]" 
+      />
+    </Link>
   );
 
   if (!isHydrated) {
@@ -32,7 +35,7 @@ const MarqueeStack: FC<MarqueeStackProps> = ({
   }
   
   return (
-    <div className={cn("relative mx-auto w-full z-10 opacity-50")}>
+    <div className={cn("relative mx-auto w-full z-10")}>
       <div className="flex flex-col justify-center items-center w-full h-full overflow-x-hidden">
         <div className={cn("relative z-50 flex h-full w-full flex-col items-center justify-center overflow-hidden", "max-w-xs", "xs:max-w-sm", "md:max-w-2xl", "lg:max-w-4xl", "xl:max-w-7xl")}>
           <Marquee pauseOnHover className={cn("[--duration:28s]", title && "[--duration:60s]")} reverse={reverse}>

@@ -1,9 +1,11 @@
 export const brandsData = [
-  { image: "/images/db.avif", alt: "Dectective Box Logo" },
-  { image: "/images/paalm.png", alt: "Paalm Logo" },
-  { image: "/images/mushngo.png", alt: "MushnGo Logo" },
-  { image: "/images/moea.png", alt: "Moea Logo" },
-  { image: "/images/petiscope_logo.png", alt: "Petiscope Logo" },
+  { image: "/images/db.avif", alt: "Dectective Box Logo", link: "https://detectivebox.com" },
+  { image: "/images/paalm.png", alt: "Paalm Logo", link: "https://paalm.co" },
+  { image: "/images/mushngo.png", alt: "MushnGo Logo", link: "https://mushngo.com" },
+  { image: "/images/moea.png", alt: "Moea Logo", link: "https://moea.io" },
+  { image: "/images/petiscope_logo.png", alt: "Petiscope Logo", link: "https://petiscope.fr" },
+  { image: "/images/flowerinstincts.webp", alt: "Flower Instinct Logo", link: "https://flowerinstincts.com/" },
+  { image: "/images/rez.webp", alt: "Rez Logo", link: "https://rezenergydrink.com" },
 ];
 
 export const navLinks = [
