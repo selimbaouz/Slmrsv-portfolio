@@ -13,8 +13,8 @@ const NavBarDesktop = () => {
     return (
         <nav className={cn("hidden", "lg:p-6 lg:flex lg:justify-between lg:gap-4 z-50", "xl:p-0")}>
             <div className="flex items-center gap-3">
-              <Link href="/" className='flex items-center gap-1'>
-                <Logo size={32} />
+              <Link href="/" className='flex items-center gap-2'>
+                <Logo size={18} color='#ffffff' />
                 <p className="font-bold font-montserrat text-xl">Selimmersive</p>
               </Link>
               <ul className="font-medium flex ml-9 gap-9 items-center">
