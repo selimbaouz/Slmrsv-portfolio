@@ -8,14 +8,14 @@ import LayoutClient from "@/components/LayoutClient";
 
 export const metadata: Metadata = {
   title: {
-    default: "Selimmersive Studio | Multidisciplinary Developer: Shopify, SaaS & Headless Solutions",
-    template: "%s | Selimmersive Studio",
+    default: "Selim Baouz | Multidisciplinary Developer: Shopify, SaaS & Headless Solutions",
+    template: "%s | Selim Baouz",
   },
   description:
     "I'm Selim Baouz, a multidisciplinary developer crafting custom Shopify stores, SaaS solutions, and Canva Apps. With 7+ years of experience, I blend code, design, and user experience to build high-performance applications tailored to your business needs.",
   keywords: [
     "Selim Baouz",
-    "Selimmersive Studio",
+    "Selim Baouz",
     "Multidisciplinary developer",
     "Shopify developer",
     "Liquid",
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://selimmersive.com",
-    siteName: "Selimmersive Studio",
-    title: "Selimmersive Studio",
-    description: "Selimmersive Studio is a multidisciplinary studio that specializes in custom Shopify stores, modern SaaS solutions, and Canva app development. Creating seamless digital experiences where code, design and real user needs meet.",
+    url: "https://selimbaouz.com",
+    siteName: "Selim Baouz",
+    title: "Selim Baouz",
+    description: "I'm Selim Baouz, a multidisciplinary developer that specializes in custom Shopify stores, modern SaaS solutions, and Canva app development. Creating seamless digital experiences where code, design and real user needs meet.",
   },
   twitter: {
     card: "summary_large_image",
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
       "Selim Baouz | Multidisciplinary Shopify, SaaS & Headless Developer",
     description:
       "Experienced developer building custom Shopify stores, SaaS applications, and Canva Apps — specialist in headless architectures and user-first experiences.",
-    images: ["https://selimmersive.com/images/og-image.webp"],
+    images: ["https://selimbaouz.com/images/og-image.webp"],
   },
   verification: {
     google: "VeUQ003CQJEmqI8Jhat7AsydV1Lf4NOuzEaViRaR5BQ",
   },
   alternates: {
-    canonical: "https://selimmersive.com",
+    canonical: "https://selimbaouz.com",
   },
 };
 

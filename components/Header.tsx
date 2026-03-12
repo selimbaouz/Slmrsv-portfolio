@@ -57,9 +57,9 @@ const HeaderPage = () => {
         >
           <h1
             className={cn(
-              "text-[38px] leading-9 sm:text-[50px] sm:leading-12 bigTitle z-50",
-              "lg:text-[45px] lg:leading-10",
-              "xl:text-[70px] xl:leading-[85px]",
+              "text-[7vw] leading-[1] bigTitle z-50",
+              "lg:text-[45px] lg:leading-[64px]",
+              "xl:text-[3.3vw]",
               "whitespace-pre-wrap",
               "text-foreground text-left"
             )}
@@ -69,7 +69,7 @@ const HeaderPage = () => {
             </span>
             <br />
             <div className="pt-1 lg:pt-2">
-              <span className="font-extrabold uppercase text-[40px] md:text-[85px] md:leading-16 lg:text-[100px] lg:leading-20 xl:text-[95px] xl:leading-[40px]">
+              <span className="font-extrabold uppercase leading-[0.9] md:leading-[0.8] lg:leading-[0.7] text-[10vw] lg:text-[9vw] xl:text-[5vw]">
               {words[index]}<br />Experiences
               </span>
             </div>
@@ -104,7 +104,7 @@ const HeaderPage = () => {
         <Image 
           src={Portfolio.src} 
           alt="Portfolio Partner" 
-          className="w-auto h-[430px] object-cover md:w-screen md:h-full xl:h-[97%] xl:w-[47%] bg-gray-200/30 xl:rounded-3xl xl:absolute xl:top-4 xl:right-4" 
+          className="h-[430px] object-cover md:w-screen md:h-full xl:h-[97%] xl:w-[47%] bg-gray-200/30 xl:rounded-3xl xl:absolute xl:top-4 xl:right-4" 
           width={Portfolio.width} 
           height={Portfolio.height} 
         />

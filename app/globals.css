@@ -27,6 +27,7 @@
 
 @theme {
   --breakpoint-hxs: 400px;
+  --breakpoint-xxl: 1600px;
 }
 
 .circle {

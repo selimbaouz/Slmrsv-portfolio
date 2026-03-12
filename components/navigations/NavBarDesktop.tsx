@@ -5,7 +5,8 @@ import Link from 'next/link';
 import ButtonEmail from '../ButtonEmail';
 import { usePathname } from 'next/navigation';
 import { navLinks } from '@/data/work';
-import Logo from '../Logo';
+import Image from 'next/image';
+import Logo from '@/public/images/Logo.webp';
 
 const NavBarDesktop = () => {
   const pathname = usePathname();
@@ -13,9 +14,9 @@ const NavBarDesktop = () => {
     return (
         <nav className={cn("hidden", "lg:p-6 lg:flex lg:justify-between lg:gap-4 z-50", "xl:p-0")}>
             <div className="flex items-center gap-3">
-              <Link href="/" className='flex items-center gap-0'>
-                <Logo size={18} color='#ffffff' />
-                <p className="font-bold font-montserrat text-xl">elimmersive</p>
+              <Link href="/" className='flex items-center gap-3'>
+                <Image src={Logo} alt="Profile lmg" className='size-10 rounded-full' />
+                <p className="font-bold font-montserrat text-xl uppercase">SBaouz</p>
               </Link>
               <ul className="font-medium flex ml-9 gap-9 items-center">
                 {navLinks.slice(1).map((link, i) => (
